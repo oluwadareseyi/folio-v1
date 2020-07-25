@@ -6,6 +6,7 @@ const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
 const About = () => {
   useEffect(() => {
+    document.title = "Seyi — About Me";
     fadeUp(".about .text", 0.8);
   }, []);
   return (

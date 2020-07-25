@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeUp } from "../animations";
 
-const transition = { duration: 1, ease: "easeInOut", delay: .8 };
+const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
 const Services = () => {
   useEffect(() => {
+    document.title = "Seyi — Services";
     fadeUp(".services .text", 0.8);
   }, []);
   return (

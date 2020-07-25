@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Seyi — Developer";
+  }, []);
   return (
     <>
       <PreLoader />

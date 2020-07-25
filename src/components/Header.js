@@ -19,7 +19,7 @@ const Header = ({ history }) => {
   return (
     <div className="header">
       <div className="logo">
-        <Link to="/">Oluwaseyi</Link>
+        <Link to="/">Oluwaseyi.</Link>
       </div>
       <div
         onClick={() => setMenuOpen(!menuOpen)}

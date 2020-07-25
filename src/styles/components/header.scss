@@ -22,6 +22,17 @@
         font-weight: 800;
         font-size: 18px;
         letter-spacing: .03em;
+        transform: rotate(270deg);
+        position: fixed;
+        top: 100px;
+        // bottom: 0;
+        left: 10px;
+        // right: 0;
+
+        @include media("<=780px") {
+            position: static;
+            transform: none;
+        }
     }
 
     .hamburger {
@@ -29,6 +40,14 @@
         mix-blend-mode: difference;
         width: 60px;
         height: 60px;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+
+
+        @include media("<=780px") {
+            position: static;
+        }
 
         &:hover {
             .hamburger-icon::before {
