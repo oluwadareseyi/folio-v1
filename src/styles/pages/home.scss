@@ -1,0 +1,21 @@
+.landing {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    font-weight: 800;
+    font-size: 30px;
+    background: $blueBlack;
+    color: $white;
+    z-index: 2;
+
+    .text {
+        background: linear-gradient(90deg, #b3aef5 4.68%, #d7cbe7 42.61%, #e5c8c8 64.68%, #ecbdaa 96.43%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #fff;
+    }
+}

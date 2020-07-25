@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  visibility: hidden;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+// @font-face {
+//   font-family: 'Proxima Nova';
+//   src: url("/src/assets/fonts/ProximaNova-Bold.ttf") format("truetype");
+//   font-weight: bold;
+// }

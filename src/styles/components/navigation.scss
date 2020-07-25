@@ -1,0 +1,61 @@
+.hamburger-menu {
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    display: none;
+    cursor: none;
+
+    .nav-primary {
+        position: relative;
+        height: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: $red;
+        z-index: 1;
+        overflow: hidden;
+
+        .nav-content {
+            position: relative;
+            top: 100px;
+            font-weight: 800;
+            font-size: 45px;
+            color: $white;
+            padding: 0 80px;
+            z-index: -10;
+
+            @include media("<=phone") {
+                padding: 0 40px;
+            }
+
+            .nav-links {
+                text-align: right;
+            }
+
+            .nav-link {
+                margin-bottom: 10px;
+
+                a {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .nav-secondary {
+        overflow: hidden;
+        height: 0;
+        background: $white;
+        z-index: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+}

@@ -1,0 +1,84 @@
+@import './breakpoints.scss';
+@import './variables.scss';
+@import './components/preloader.scss';
+@import './components/header.scss';
+@import './components/navigation.scss';
+@import './pages/home.scss';
+@import './pages/about.scss';
+@import './pages/services.scss';
+
+
+
+// Temporary styles
+// .pages {
+//     background: $grey-black;
+//     height: 100vh;
+//     height: calc(var(--vh, 1vh) * 100);
+// }
+
+
+// entry transition class
+.transition {
+    overflow: hidden;
+    height: 0;
+    z-index: 1;
+    background: $black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    // bottom: 0;
+    right: 0;
+}
+
+
+// exit transition class
+.transition2 {
+    @extend .transition;
+    z-index: 10;
+}
+
+
+//custom cursor
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    background-color: $blue;
+    border-radius: 50%;
+    position: absolute;
+    transition: 200ms ease-out;
+    z-index: 4;
+    animation: cursorName 500ms infinite alternate;
+
+    @include media("<=tablet") {
+        display: none;
+    }
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 10px;
+    //     height: 10px;
+    //     border: 8px solid rgb(187, 184, 184);
+    //     border-radius: 50%;
+    //     opacity: .5;
+    //     top: -8px;
+    //     left: -8px;
+    // }
+}
+
+.cursor2 {
+    opacity: .7;
+    transition: 450ms ease-out;
+}
+
+@keyframes cursorName {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.7);
+    }
+}

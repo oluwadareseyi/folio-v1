@@ -1,0 +1,13 @@
+.services {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    font-weight: 800;
+    font-size: 30px;
+    background: $blueBlack;
+    color: $white;
+    z-index: 2;
+}
