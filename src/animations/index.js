@@ -49,19 +49,16 @@ export const preLoaderAnim = () => {
       },
       ease: "Elastic.easeOut",
     })
-    .from(
-      ".links .item",
-      {
-        duration: 0.5,
-        opacity: 0,
-        y: 80,
-        stagger: {
-          amount: 0.5,
-        },
-        ease: "expo.easeOut",
+    .from(".links .item", {
+      duration: 0.5,
+      opacity: 0,
+      delay: window.innerWidth < 763 ? -2.8 : -0.5,
+      y: 80,
+      stagger: {
+        amount: 0.5,
       },
-      "-=.5"
-    )
+      ease: "expo.easeOut",
+    })
     .to(".preloader", {
       duration: 0,
       css: { display: "none" },

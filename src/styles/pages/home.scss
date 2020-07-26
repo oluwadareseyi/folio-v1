@@ -53,6 +53,10 @@
             margin-bottom: 50px;
             position: relative;
 
+            @include media("<764px") {
+                display: none;
+            }
+
             .text-con {
                 position: relative;
                 display: inline-block;
@@ -80,6 +84,15 @@
             @include media("<764px") {
                 font-weight: 600;
                 font-size: 40px;
+            }
+        }
+
+        .landing__main2 {
+            @extend .landing__main;
+            display: none;
+
+            @include media("<764px") {
+                display: block;
             }
         }
 

@@ -12,6 +12,14 @@ const text2 = "with technology.";
 const Home = () => {
   useEffect(() => {
     document.title = "Seyi — Developer";
+
+    gsap.from(".landing__main2", {
+      duration: 1,
+      delay: 6.5,
+      opacity: 0,
+      y: 80,
+      ease: "expo.easeOut",
+    });
   }, []);
   return (
     <>
@@ -35,6 +43,9 @@ const Home = () => {
                 <span className="text">{t}</span>
               ))}
             </span>
+          </h1>
+          <h1 className="landing__main2">
+            I build web solutions <br /> with technology.
           </h1>
           <div className="links">
             <NavLink className="item" to="/about">
