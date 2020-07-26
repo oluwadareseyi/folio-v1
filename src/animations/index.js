@@ -32,14 +32,6 @@ export const preLoaderAnim = () => {
       y: 80,
       ease: "expo.easeOut",
     })
-    .from(".landing__top .main", {
-      duration: 1,
-      delay: -0.5,
-      opacity: 0,
-      y: 80,
-      stagger: 0.3,
-      ease: "expo.easeOut",
-    })
     .to(
       ".preloader",
       {
@@ -48,6 +40,27 @@ export const preLoaderAnim = () => {
         ease: "Power3.easeOut",
       },
       "-=2"
+    )
+    .from(".landing__main .text", {
+      duration: 1.5,
+      scale: 0,
+      stagger: {
+        amount: 2,
+      },
+      ease: "Elastic.easeOut",
+    })
+    .from(
+      ".links .item",
+      {
+        duration: 0.5,
+        opacity: 0,
+        y: 80,
+        stagger: {
+          amount: 0.5,
+        },
+        ease: "expo.easeOut",
+      },
+      "-=.5"
     )
     .to(".preloader", {
       duration: 0,

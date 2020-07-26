@@ -45,12 +45,25 @@
             }
         }
 
-        .main {
+        .landing__main {
             font-weight: 800;
             font-size: 75px;
             line-height: 1.2;
             margin-top: 30px;
             margin-bottom: 50px;
+            position: relative;
+
+            .text-con {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                white-space: pre;
+            }
+
+            .text {
+                transform-origin: 50% 100%;
+                display: inline-block;
+            }
 
             br {
                 @include media("<764px") {
@@ -75,12 +88,15 @@
 
             a {
                 color: $green;
-                margin-right: 10px;
+                // margin-right: 10px;
             }
 
             span {
                 margin-left: 10px;
-                color: $red;
+
+                &:nth-child(3) {
+                    color: $darkOrange;
+                }
             }
         }
     }
