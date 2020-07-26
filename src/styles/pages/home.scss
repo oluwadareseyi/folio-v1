@@ -1,21 +1,87 @@
 .landing {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    font-weight: 800;
-    font-size: 30px;
     background: $blueBlack;
     color: $white;
     z-index: 2;
 
-    .text {
-        background: linear-gradient(90deg, #b3aef5 4.68%, #d7cbe7 42.61%, #e5c8c8 64.68%, #ecbdaa 96.43%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #fff;
+    // .text {
+    //     background: linear-gradient(90deg, #b3aef5 4.68%, #d7cbe7 42.61%, #e5c8c8 64.68%, #ecbdaa 96.43%);
+    //     -webkit-background-clip: text;
+    //     background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //     color: #fff;
+    // }
+
+    &__top {
+        padding: 180px 100px;
+        padding-bottom: 180px;
+        text-align: center;
+
+        @include media("<764px") {
+            text-align: left;
+            padding-bottom: 80px;
+
+        }
+
+        @include media("<=600px") {
+            padding: 180px 70px;
+            padding-bottom: 80px;
+        }
+
+        @include media("<=400px") {
+            padding: 180px 50px;
+            padding-bottom: 80px;
+        }
+
+        .sub {
+            font-size: 14px;
+            color: $subText;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+
+            @include media("<764px") {
+                font-size: 12px;
+            }
+        }
+
+        .main {
+            font-weight: 800;
+            font-size: 75px;
+            line-height: 1.2;
+            margin-top: 30px;
+            margin-bottom: 50px;
+
+            br {
+                @include media("<764px") {
+                    display: none;
+                }
+            }
+
+
+
+            @include media("<970px") {
+                font-size: 50px;
+            }
+
+            @include media("<764px") {
+                font-weight: 600;
+                font-size: 40px;
+            }
+        }
+
+        .links {
+            font-weight: 800;
+
+            a {
+                color: $green;
+                margin-right: 10px;
+            }
+
+            span {
+                margin-left: 10px;
+                color: $red;
+            }
+        }
     }
 }

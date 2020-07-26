@@ -10,7 +10,7 @@
     z-index: 20;
 
 
-    @include media("<=500px") {
+    @include media("<=600px") {
         padding: 0 20px;
         padding-top: 30px;
     }

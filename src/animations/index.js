@@ -26,11 +26,19 @@ export const preLoaderAnim = () => {
       stagger: 0.2,
       ease: "Power3.easeOut",
     })
-    .from(".landing div", {
+    .from(".landing__top .sub", {
       duration: 1,
       opacity: 0,
       y: 80,
-      ease: "Power4.easeOut",
+      ease: "expo.easeOut",
+    })
+    .from(".landing__top .main", {
+      duration: 1,
+      delay: -0.5,
+      opacity: 0,
+      y: 80,
+      stagger: 0.3,
+      ease: "expo.easeOut",
     })
     .to(
       ".preloader",
