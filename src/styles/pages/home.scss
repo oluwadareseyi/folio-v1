@@ -1,3 +1,11 @@
+@mixin semi-circle($size) {
+    position: absolute;
+    z-index: -1;
+    height: $size * 2;
+    width: $size;
+    border-radius: $size * 2 0px 0px $size * 2;
+}
+
 .landing {
     position: relative;
     background: $blueBlack;
@@ -18,6 +26,10 @@
         text-align: center;
         font-weight: 800;
         position: relative;
+        overflow: hidden;
+        max-height: 100vh;
+
+
 
         @include media("<764px") {
             text-align: left;
@@ -110,7 +122,92 @@
             }
         }
 
-        &__shapes {}
+        .shapes-1 {
+            z-index: -1;
+
+            .shape-1 {
+                right: 15%;
+                top: 25%;
+                background: none;
+                border: 4px solid $redShape;
+                transform: rotate(-50deg);
+                @include semi-circle(30px);
+            }
+
+            .shape-2 {
+                position: absolute;
+                left: 25%;
+                bottom: 23%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: -5px;
+                    @include semi-circle(15px);
+                    background: $purpleShape;
+                    // transform: rotate(-50deg);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $white;
+                    @include semi-circle(10px);
+                    transform: rotate(-180deg);
+                }
+            }
+
+            .shape-3 {
+                left: 12%;
+                top: 15%;
+                width: 20px;
+                position: absolute;
+                height: 20px;
+                background: $greenShape;
+                // transform: rotate(-50deg);
+                border-radius: 0 100px 0 0;
+            }
+
+            .shape-4 {
+                position: absolute;
+                right: 30%;
+                bottom: 30%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -14px;
+                    top: 5px;
+                    @include semi-circle(8px);
+                    background: $pinkShape;
+                    transform: rotate(-180deg);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $pinkShape;
+                    @include semi-circle(13px);
+                    transform: rotate(-180deg);
+                }
+            }
+
+            .shape-5 {
+                right: 15%;
+                top: -1.8%;
+                width: 30px;
+                position: absolute;
+                height: 30px;
+                border: 8px solid $white;
+                border-radius: 50%;
+                /* Halve the circle */
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                /* Rotate the circle */
+                // transform: rotate(-45deg);
+            }
+        }
 
         .scroll-down {
             display: inline;

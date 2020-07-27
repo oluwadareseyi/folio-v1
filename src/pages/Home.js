@@ -4,6 +4,7 @@ import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
+import { mobileLanding } from "../animations";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
@@ -13,19 +14,11 @@ const text2 = "with technology.";
 const Home = () => {
   useEffect(() => {
     document.title = "Seyi — Developer";
-
-    window.innerWidth < 763 &&
-      gsap.from(".landing__main2", {
-        duration: 1,
-        delay: 6.2,
-        opacity: 0,
-        y: 80,
-        ease: "expo.easeOut",
-      });
+    mobileLanding();
   }, []);
   return (
     <>
-      {/* <PreLoader /> */}
+      <PreLoader />
 
       <motion.div
         exit={{ height: "100%", transition }}
@@ -64,7 +57,13 @@ const Home = () => {
           <div className="scroll-down">
             <ScrollSVG />
           </div>
-          <div className="shapes"></div>
+          <div className="shapes-1">
+            <div className="shape shape-1"></div>
+            <div className="shape shape-2"></div>
+            <div className="shape shape-3"></div>
+            <div className="shape shape-4"></div>
+            <div className="shape shape-5"></div>
+          </div>
         </section>
       </div>
     </>

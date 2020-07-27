@@ -46,6 +46,11 @@
     pointer-events: none;
     background-color: $white;
     border-radius: 50%;
+    color: $black;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // font-weight: 800;
     position: absolute;
     transition: 450ms ease-out;
     z-index: 10;
