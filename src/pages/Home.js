@@ -13,17 +13,18 @@ const Home = () => {
   useEffect(() => {
     document.title = "Seyi — Developer";
 
-    gsap.from(".landing__main2", {
-      duration: 1,
-      delay: 6.5,
-      opacity: 0,
-      y: 80,
-      ease: "expo.easeOut",
-    });
+    window.innerWidth < 763 &&
+      gsap.from(".landing__main2", {
+        duration: 1,
+        delay: 6.2,
+        opacity: 0,
+        y: 80,
+        ease: "expo.easeOut",
+      });
   }, []);
   return (
     <>
-      <PreLoader />
+      {/* <PreLoader /> */}
 
       <motion.div
         exit={{ height: "100%", transition }}
@@ -35,12 +36,16 @@ const Home = () => {
           <div className="sub">Software Developer</div>
           <h1 className="landing__main">
             <span className="text-con">
-              {text1.split("").map((t) => (
-                <span className="text">{t}</span>
+              {text1.split("").map((t, i) => (
+                <span key={i} className="text">
+                  {t}
+                </span>
               ))}
               <br />
-              {text2.split("").map((t) => (
-                <span className="text">{t}</span>
+              {text2.split("").map((t, i) => (
+                <span key={i} className="text">
+                  {t}
+                </span>
               ))}
             </span>
           </h1>
@@ -54,6 +59,8 @@ const Home = () => {
             <span className="item">—</span>
             <span className="item">My Projects</span>
           </div>
+
+          <div className="shapes"></div>
         </section>
       </div>
     </>

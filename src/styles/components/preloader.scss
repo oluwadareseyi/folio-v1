@@ -24,7 +24,7 @@
         overflow: hidden;
         font-weight: 800;
         opacity: 0;
-        color: $green;
+        color: $white;
 
         @include media("<=phone") {
             font-size: 20px;

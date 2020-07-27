@@ -14,12 +14,15 @@
 
     &__top {
         padding: 180px 100px;
-        padding-bottom: 180px;
+        padding-bottom: 160px;
         text-align: center;
+        font-weight: 800;
+        position: relative;
 
         @include media("<764px") {
             text-align: left;
             padding-bottom: 80px;
+            // padding-right: 120px;
 
         }
 
@@ -36,17 +39,11 @@
         .sub {
             font-size: 14px;
             color: $subText;
-            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-
-            @include media("<764px") {
-                font-size: 12px;
-            }
         }
 
         .landing__main {
-            font-weight: 800;
             font-size: 75px;
             line-height: 1.2;
             margin-top: 30px;
@@ -112,5 +109,7 @@
                 }
             }
         }
+
+        &__shapes {}
     }
 }

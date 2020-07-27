@@ -7,7 +7,7 @@
     right: 10px;
     padding-top: 20px;
     align-items: center;
-    z-index: 20;
+    z-index: 10;
 
 
     @include media("<=600px") {
@@ -20,18 +20,19 @@
         mix-blend-mode: difference;
         font-family: 'Inter', sans-serif;
         font-weight: 800;
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: .03em;
         transform: rotate(270deg);
         position: fixed;
         top: 100px;
         // bottom: 0;
-        left: 10px;
+        left: 5px;
         // right: 0;
 
         @include media("<=780px") {
             position: static;
             transform: none;
+            font-size: 18px;
         }
     }
 

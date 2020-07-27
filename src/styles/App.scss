@@ -41,14 +41,15 @@
 //custom cursor
 
 .cursor {
-    width: 10px;
-    height: 10px;
+    width: 50px;
+    height: 50px;
     pointer-events: none;
-    background-color: $blue;
+    background-color: $white;
     border-radius: 50%;
     position: absolute;
-    transition: 200ms ease-out;
-    z-index: 4;
+    transition: 450ms ease-out;
+    z-index: 10;
+    mix-blend-mode: exclusion;
     animation: cursorName 500ms infinite alternate;
 
     @include media("<=tablet") {
@@ -69,8 +70,11 @@
 }
 
 .cursor2 {
-    opacity: .7;
-    transition: 450ms ease-out;
+    // opacity: .7;
+    width: 10px;
+    height: 10px;
+    transition: 200ms ease-out;
+    // mix-blend-mode: lighten;
 }
 
 @keyframes cursorName {
@@ -79,6 +83,6 @@
     }
 
     to {
-        transform: scale(.7);
+        transform: scale(.8);
     }
 }

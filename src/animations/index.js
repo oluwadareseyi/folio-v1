@@ -42,18 +42,20 @@ export const preLoaderAnim = () => {
       "-=2"
     )
     .from(".landing__main .text", {
-      duration: 1.5,
-      scale: 0,
+      duration: 2,
+      // scale: 0,
+      // y: 20,
+      opacity: 0,
       stagger: {
         amount: 2,
       },
-      ease: "Elastic.easeOut",
+      ease: "power3.easeInOut",
     })
     .from(".links .item", {
       duration: 0.5,
       opacity: 0,
-      delay: window.innerWidth < 763 ? -2.8 : -0.5,
-      y: 80,
+      delay: window.innerWidth < 763 ? -3 : -0.6,
+      // y: 80,
       stagger: {
         amount: 0.5,
       },
