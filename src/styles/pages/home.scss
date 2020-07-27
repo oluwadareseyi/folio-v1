@@ -111,5 +111,15 @@
         }
 
         &__shapes {}
+
+        .scroll-down {
+            display: inline;
+            position: absolute;
+            left: 30px;
+
+            @include media("<=780px") {
+                display: none;
+            }
+        }
     }
 }

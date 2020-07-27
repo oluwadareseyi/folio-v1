@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
+import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
@@ -60,6 +61,9 @@ const Home = () => {
             <span className="item">My Projects</span>
           </div>
 
+          <div className="scroll-down">
+            <ScrollSVG />
+          </div>
           <div className="shapes"></div>
         </section>
       </div>
