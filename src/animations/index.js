@@ -60,13 +60,6 @@ export const preLoaderAnim = (setShapesAnim) => {
       },
       ease: "power3.easeInOut",
     })
-    .from(".shapes-1 .shape", {
-      duration: 1.5,
-      opacity: 0,
-      delay: -2,
-      ease: "power3.easeInOut",
-      stagger: 1,
-    })
     .from(".links .item", {
       duration: 0.5,
       opacity: 0,

@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <PreLoader />
+      {/* <PreLoader /> */}
 
       <motion.div
         exit={{ height: "100%", transition }}
@@ -56,13 +56,6 @@ const Home = () => {
 
           <div className="scroll-down">
             <ScrollSVG />
-          </div>
-          <div className="shapes-1">
-            <div className="shape shape-1"></div>
-            <div className="shape shape-2"></div>
-            <div className="shape shape-3"></div>
-            <div className="shape shape-4"></div>
-            <div className="shape shape-5"></div>
           </div>
         </section>
       </div>
