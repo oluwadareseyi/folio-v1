@@ -17,8 +17,6 @@ const pages = [
 
 function App() {
   const location = useLocation();
-
-  console.log("App.js rendering...");
   let cursorRef = useRef();
   let cursorRef2 = useRef();
 
@@ -34,11 +32,11 @@ function App() {
     const cursorList = document.addEventListener("mousemove", (e) => {
       cursorRef.current.setAttribute(
         "style",
-        `top:${e.pageY - 10}px; left:${e.pageX - 10}px`
+        `transform: translate3d(${e.pageX - 10}px, ${e.pageY - 10}px, 0px)`
       );
       cursorRef2.current.setAttribute(
         "style",
-        `top:${e.pageY + 10}px; left:${e.pageX + 10}px`
+        `transform: translate3d(${e.pageX + 10}px, ${e.pageY + 10}px, 0px)`
       );
     });
 

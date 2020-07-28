@@ -76,6 +76,7 @@ export const preLoaderAnim = () => {
         amount: 0.5,
       },
       ease: "expo.easeOut",
+      onComplete: animateShapes(),
     })
     .to(".preloader", {
       duration: 0,
@@ -153,6 +154,39 @@ export const mobileLanding = () => {
       delay: 6.2,
       opacity: 0,
       y: 80,
+      ease: "expo.easeOut",
+    });
+};
+
+const animateShapes = () => {
+  const tl = gsap.timeline({
+    repeat: -1,
+  });
+
+  tl.to(".shapes .shape", {
+    duration: 5,
+    x: 30,
+    ease: "expo.easeOut",
+  })
+    .to(".shapes .shape", {
+      duration: 4,
+      y: -50,
+      ease: "expo.easeOut",
+    })
+    .to(".shapes .shape", {
+      duration: 4,
+      x: -30,
+      ease: "expo.easeOut",
+    })
+    .to(".shapes .shape", {
+      duration: 4,
+      y: -50,
+      ease: "expo.easeOut",
+    })
+    .to(".shapes .shape", {
+      duration: 2,
+      x: 0,
+      y: 0,
       ease: "expo.easeOut",
     });
 };
