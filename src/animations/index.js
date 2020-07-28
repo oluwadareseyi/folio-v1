@@ -4,10 +4,6 @@ import gsap from "gsap";
 
 const tl = gsap.timeline();
 
-const infiniteTl = gsap.timeline({
-  repeat: -1,
-});
-
 // Preloader Animation
 export const preLoaderAnim = () => {
   tl.to("body", {
@@ -95,6 +91,7 @@ export const preLoaderAnim = () => {
 };
 
 export const openMenu = () => {
+  const tl = gsap.timeline();
   tl.to(".hamburger-menu", {
     duration: 0,
     css: { display: "block" },
@@ -122,6 +119,7 @@ export const openMenu = () => {
 };
 
 export const closeMenu = () => {
+  const tl = gsap.timeline();
   tl.to("body", {
     duration: 0.1,
     css: { overflowY: "scroll" },
@@ -169,6 +167,9 @@ export const mobileLanding = () => {
 };
 
 const animateShapes = () => {
+  const infiniteTl = gsap.timeline({
+    repeat: -1,
+  });
   infiniteTl
     .to(".shapes .shape", {
       duration: 4,
@@ -182,7 +183,6 @@ const animateShapes = () => {
       rotate: 360,
       delay: -2,
       ease: "power3.easeInOut",
-      stagger: 1,
     })
     .to(".shapes .shape", {
       duration: 3,
@@ -198,7 +198,7 @@ const animateShapes = () => {
       stagger: 1,
     })
     .to(".shapes .shape", {
-      duration: 1,
+      duration: 1.5,
       opacity: 1,
       ease: "power3.easeInOut",
       stagger: 1,
@@ -206,6 +206,9 @@ const animateShapes = () => {
 };
 
 const animateMainShape = () => {
+  const infiniteTl = gsap.timeline({
+    repeat: -1,
+  });
   infiniteTl
     .to(".shapes .main-circle", {
       duration: 6,

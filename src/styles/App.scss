@@ -34,7 +34,7 @@
 // exit transition class
 .transition2 {
     @extend .transition;
-    z-index: 10;
+    z-index: 5;
 }
 
 
@@ -52,7 +52,7 @@
     // align-items: center;
     // font-weight: 800;
     position: absolute;
-    transition: 500ms ease-out;
+    transition: 450ms ease-out;
     z-index: 10;
     mix-blend-mode: exclusion;
     animation: cursorName 500ms infinite alternate;
