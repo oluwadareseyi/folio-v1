@@ -4,6 +4,10 @@ import gsap from "gsap";
 
 const tl = gsap.timeline();
 
+const infiniteTl = gsap.timeline({
+  repeat: -1,
+});
+
 // Preloader Animation
 export const preLoaderAnim = () => {
   tl.to("body", {
@@ -60,13 +64,6 @@ export const preLoaderAnim = () => {
       },
       ease: "power3.easeInOut",
     })
-    .from(".shapes .shape", {
-      duration: 1,
-      opacity: 0,
-      delay: -2,
-      ease: "power3.easeInOut",
-      stagger: 1,
-    })
     .from(".links .item", {
       duration: 0.5,
       opacity: 0,
@@ -76,7 +73,20 @@ export const preLoaderAnim = () => {
         amount: 0.5,
       },
       ease: "expo.easeOut",
+      onComplete: animateMainShape(),
+    })
+    .from(".main-circle", {
+      duration: 1,
+      opacity: 0,
+      ease: "power3.easeInOut",
       onComplete: animateShapes(),
+    })
+    .from(".shapes .shape", {
+      duration: 1,
+      opacity: 0,
+      delay: -1,
+      ease: "power3.easeInOut",
+      stagger: 1,
     })
     .to(".preloader", {
       duration: 0,
@@ -159,32 +169,58 @@ export const mobileLanding = () => {
 };
 
 const animateShapes = () => {
-  const tl = gsap.timeline({
-    repeat: -1,
-  });
+  infiniteTl
+    .to(".shapes .shape", {
+      duration: 4,
+      rotate: 360,
+      delay: -1,
+      ease: "power3.easeInOut",
+      stagger: 2,
+    })
+    .to(".shapes .shape-3", {
+      duration: 1,
+      rotate: 360,
+      delay: -2,
+      ease: "power3.easeInOut",
+      stagger: 1,
+    })
+    .to(".shapes .shape", {
+      duration: 3,
+      rotate: 0,
+      ease: "power3.easeInOut",
+      stagger: 1,
+    })
+    .to(".shapes .shape", {
+      duration: 1,
+      opacity: 0,
+      delay: -1,
+      ease: "power3.easeInOut",
+      stagger: 1,
+    })
+    .to(".shapes .shape", {
+      duration: 1,
+      opacity: 1,
+      ease: "power3.easeInOut",
+      stagger: 1,
+    });
+};
 
-  tl.to(".shapes .shape", {
-    duration: 5,
-    x: 30,
-    ease: "expo.easeOut",
-  })
-    .to(".shapes .shape", {
-      duration: 4,
-      y: -50,
-      ease: "expo.easeOut",
-    })
-    .to(".shapes .shape", {
-      duration: 4,
+const animateMainShape = () => {
+  infiniteTl
+    .to(".shapes .main-circle", {
+      duration: 6,
       x: -30,
-      ease: "expo.easeOut",
-    })
-    .to(".shapes .shape", {
-      duration: 4,
       y: -50,
       ease: "expo.easeOut",
     })
-    .to(".shapes .shape", {
-      duration: 2,
+    .to(".shapes .main-circle", {
+      duration: 6,
+      x: -30,
+      y: 50,
+      ease: "expo.easeOut",
+    })
+    .to(".shapes .main-circle", {
+      duration: 4,
       x: 0,
       y: 0,
       ease: "expo.easeOut",

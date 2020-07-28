@@ -1,10 +1,10 @@
-// @mixin semi-circle($size) {
-//     position: absolute;
-//     z-index: -1;
-//     height: $size * 2;
-//     width: $size;
-//     border-radius: $size * 2 0px 0px $size * 2;
-// }
+@mixin semi-circle($size) {
+    position: absolute;
+    z-index: -1;
+    height: $size * 2;
+    width: $size;
+    border-radius: $size * 2 0px 0px $size * 2;
+}
 
 // @function randomNum($min, $max) {
 //     $rand: random();
@@ -140,20 +140,87 @@
         }
 
         .shapes {
-            @include media("<=780px") {
-                display: none;
-            }
-
-            .shape-1 {
+            .main-circle {
                 z-index: -1;
                 position: absolute;
-                top: 40%;
+                top: 43%;
                 left: 20%;
-                width: 90px;
-                height: 90px;
+                width: 70px;
+                height: 70px;
                 background: none;
                 border: 15px solid $redShape;
                 border-radius: 50%;
+
+                @include media("<=780px") {
+                    display: none;
+                }
+            }
+
+            .shape-1 {
+                position: absolute;
+                left: 6%;
+                bottom: 10%;
+                transform-origin: center center;
+
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -10px;
+                    @include semi-circle(10px);
+                    background: $purpleShape;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $white;
+                    @include semi-circle(10px);
+                    transform: rotate(-180deg);
+                }
+            }
+
+            .shape-2 {
+                position: absolute;
+                top: 10%;
+                left: 13%;
+                transform-origin: center center;
+
+
+
+                svg {
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(40deg);
+                }
+
+                polygon {
+                    stroke: $blueShape;
+                    stroke-width: 20;
+                }
+            }
+
+            .shape-3 {
+                position: absolute;
+                right: 2%;
+                top: 30%;
+                width: 15px;
+                height: 15px;
+                background: none;
+                border: 3px solid $purpleShape;
+                transform: rotate(-140deg);
+                transform-origin: center center;
+            }
+
+            .shape-4 {
+                right: 28%;
+                position: absolute;
+                width: 13px;
+                height: 13px;
+                background: none;
+                border: 4px solid $greenShape;
+                border-radius: 50%;
+                transform-origin: center center;
             }
         }
     }
@@ -181,29 +248,29 @@
 //         @include semi-circle(20px);
 //     }
 
-//     .shape-2 {
+// .shape-2 {
+//     position: absolute;
+//     left: 10%;
+//     bottom: 10%;
+
+//     &::before {
+//         content: "";
 //         position: absolute;
-//         left: 10%;
-//         bottom: 10%;
-
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             left: -20px;
-//             top: -5px;
-//             @include semi-circle(15px);
-//             background: $purpleShape;
-//             // transform: rotate(-50deg);
-//         }
-
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             background: $white;
-//             @include semi-circle(10px);
-//             transform: rotate(-180deg);
-//         }
+//         left: -20px;
+//         top: -5px;
+//         @include semi-circle(15px);
+//         background: $purpleShape;
+//         // transform: rotate(-50deg);
 //     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         background: $white;
+//         @include semi-circle(10px);
+//         transform: rotate(-180deg);
+//     }
+// }
 
 
 //     .shape-3 {
@@ -269,26 +336,26 @@
 //     .shape-1 {}
 
 //     .shape-2 {
-//         position: absolute;
-//         right: percentage(randomNum(15, 30) / 100);
-//         bottom: percentage(randomNum(10, 25) / 100);
+// position: absolute;
+// right: percentage(randomNum(15, 30) / 100);
+// bottom: percentage(randomNum(10, 25) / 100);
 
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             left: -10px;
-//             @include semi-circle(10px);
-//             background: $purpleShape;
-//             // transform: rotate(-50deg);
-//         }
+// &::before {
+//     content: "";
+//     position: absolute;
+//     left: -10px;
+//     @include semi-circle(10px);
+//     background: $purpleShape;
+//     // transform: rotate(-50deg);
+// }
 
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             background: $white;
-//             @include semi-circle(10px);
-//             transform: rotate(-180deg);
-//         }
+// &::after {
+//     content: "";
+//     position: absolute;
+//     background: $white;
+//     @include semi-circle(10px);
+//     transform: rotate(-180deg);
+// }
 //     }
 
 //     .shape-3 {

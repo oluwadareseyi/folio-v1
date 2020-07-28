@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
+import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
 import { mobileLanding } from "../animations";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
@@ -57,7 +58,13 @@ const Home = () => {
           </div>
 
           <div className="shapes">
-            <div className="shape shape-1"></div>
+            <div className="main-circle" />
+            <div className="shape shape-1" />
+            <div className="shape shape-2">
+              <Triangle />
+            </div>
+            <div className="shape shape-3" />
+            <div className="shape shape-4" />
           </div>
         </section>
 
