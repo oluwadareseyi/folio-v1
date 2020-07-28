@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
-import gsap from "gsap";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { mobileLanding } from "../animations";
 
@@ -10,7 +9,6 @@ const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
 const text1 = "I build web solutions";
 const text2 = "with technology.";
-
 const Home = () => {
   useEffect(() => {
     document.title = "Seyi — Developer";
@@ -18,7 +16,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      {/* <PreLoader /> */}
+      <PreLoader />
 
       <motion.div
         exit={{ height: "100%", transition }}
@@ -57,7 +55,13 @@ const Home = () => {
           <div className="scroll-down">
             <ScrollSVG />
           </div>
+
+          <div className="shapes">
+            <div className="shape shape-1"></div>
+          </div>
         </section>
+
+        <section className="landing__work"></section>
       </div>
     </>
   );

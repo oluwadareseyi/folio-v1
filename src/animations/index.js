@@ -5,7 +5,7 @@ import gsap from "gsap";
 const tl = gsap.timeline();
 
 // Preloader Animation
-export const preLoaderAnim = (setShapesAnim) => {
+export const preLoaderAnim = () => {
   tl.to("body", {
     duration: 0,
     css: { overflowY: "hidden" },
@@ -59,6 +59,13 @@ export const preLoaderAnim = (setShapesAnim) => {
         amount: 2,
       },
       ease: "power3.easeInOut",
+    })
+    .from(".shapes .shape", {
+      duration: 1,
+      opacity: 0,
+      delay: -2,
+      ease: "power3.easeInOut",
+      stagger: 1,
     })
     .from(".links .item", {
       duration: 0.5,
@@ -148,9 +155,4 @@ export const mobileLanding = () => {
       y: 80,
       ease: "expo.easeOut",
     });
-};
-
-export const animateShapes = () => {
-  console.log("completed");
-  const shapesTl = gsap.timeline();
 };

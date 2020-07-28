@@ -1,17 +1,17 @@
-@mixin semi-circle($size) {
-    position: absolute;
-    z-index: -1;
-    height: $size * 2;
-    width: $size;
-    border-radius: $size * 2 0px 0px $size * 2;
-}
+// @mixin semi-circle($size) {
+//     position: absolute;
+//     z-index: -1;
+//     height: $size * 2;
+//     width: $size;
+//     border-radius: $size * 2 0px 0px $size * 2;
+// }
 
-@function randomNum($min, $max) {
-    $rand: random();
-    $randomNum: $min + floor($rand * (($max - $min) + 1));
+// @function randomNum($min, $max) {
+//     $rand: random();
+//     $randomNum: $min + floor($rand * (($max - $min) + 1));
 
-    @return $randomNum;
-}
+//     @return $randomNum;
+// }
 
 .landing {
     position: relative;
@@ -136,6 +136,24 @@
 
             @include media("<=780px") {
                 display: none;
+            }
+        }
+
+        .shapes {
+            @include media("<=780px") {
+                display: none;
+            }
+
+            .shape-1 {
+                z-index: -1;
+                position: absolute;
+                top: 40%;
+                left: 20%;
+                width: 90px;
+                height: 90px;
+                background: none;
+                border: 15px solid $redShape;
+                border-radius: 50%;
             }
         }
     }
