@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <PreLoader />
+      {/* <PreLoader /> */}
 
       <motion.div
         exit={{ height: "100%", transition }}
@@ -68,7 +68,42 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="landing__work"></section>
+        <section className="landing__work">
+          <div className="title">
+            My <br /> Projects -
+          </div>
+          <div className="boxes">
+            <a className="box box-1">
+              <div className="box-content">
+                <div className="p-title">Perxels</div>
+                <div className="p-sub">
+                  Responsive website for a design school
+                </div>
+                <div className="link">View Project &#8594;</div>
+              </div>
+
+              <div className="box-image"></div>
+            </a>
+            <a className="box box-2">
+              <div className="box-content">
+                <div className="p-title"></div>
+                <div className="p-sub"></div>
+              </div>
+            </a>
+            <a className="box box-3">
+              <div className="box-content">
+                <div className="p-title"></div>
+                <div className="p-sub"></div>
+              </div>
+            </a>
+            <a className="box box-4">
+              <div className="box-content">
+                <div className="p-title"></div>
+                <div className="p-sub"></div>
+              </div>
+            </a>
+          </div>
+        </section>
       </div>
     </>
   );

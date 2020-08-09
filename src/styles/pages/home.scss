@@ -35,6 +35,7 @@
         position: relative;
         overflow: hidden;
         max-height: 100vh;
+        font-family: 'Manrope', sans-serif;
 
 
 
@@ -243,8 +244,123 @@
     }
 
 
-    &__work {}
+    &__work {
+        background: $blackSec;
+        padding: 90px 60px;
+
+        .title {
+            font-weight: 800;
+            font-size: 55px;
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-column-gap: 75px;
+            grid-row-gap: 60px;
+        }
+
+
+        .box {
+            height: 620px;
+            position: relative;
+
+            &::after {
+                background: rgba(15, 20, 30, .8);
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+                content: '';
+                box-sizing: border-box;
+                transition: opacity .2s linear;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+
+                .link {
+                    color: $subText;
+                    opacity: 1;
+                }
+            }
+
+            .link {
+                font-weight: 600;
+                margin-top: 20px;
+                opacity: 0;
+                color: $black;
+            }
+
+
+
+            .box-content {
+                padding: 40px 20px;
+                padding-bottom: 20px;
+                z-index: 2;
+                position: relative;
+
+                .p-title {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    letter-spacing: 3px;
+                    font-size: 18px;
+                }
+
+                .p-sub {
+                    font-family: 'Manrope', sans-serif;
+                    font-weight: 800;
+                    font-size: 37px;
+                    padding-right: 60px;
+                    margin-top: 20px;
+                    line-height: 1.2;
+                }
+
+
+            }
+        }
+
+        .box-1 {
+            background: $purpleShape;
+
+            margin-top: 120px;
+            overflow: hidden;
+            padding: 0 20px;
+
+
+            .box-image {
+                top: -30%;
+                width: 100%;
+                height: 100%;
+                background: url("../../assets/images/perxels-mockup.png") no-repeat;
+                background-size: contain;
+                // background-position: 50% 50%;
+            }
+        }
+
+        .box-2 {
+            background: $boxBlue;
+
+        }
+
+        .box-3 {
+            background: rgb(29, 182, 188);
+        }
+
+        .box-4 {
+            // background: $redShape;
+            background: rgb(232, 49, 81);
+            margin-top: -120px;
+        }
+    }
 }
+
 
 
 // .shapes-1 {
