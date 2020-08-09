@@ -84,23 +84,48 @@ const Home = () => {
 
               <div className="box-image"></div>
             </a>
-            <a className="box box-2">
+            <a
+              href="https://printstudio.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box box-2"
+            >
               <div className="box-content">
-                <div className="p-title"></div>
-                <div className="p-sub"></div>
+                <div className="p-title">Print Studio</div>
+                <div className="p-sub">
+                  Online platform for all things prints
+                </div>
+                <div className="link">View Project &#8594;</div>
               </div>
+
+              <div className="box-image"></div>
             </a>
-            <a className="box box-3">
+            <a
+              href="https://www.lifepith.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box box-3"
+            >
               <div className="box-content">
-                <div className="p-title"></div>
-                <div className="p-sub"></div>
+                <div className="p-title">Life Pith</div>
+                <div className="p-sub">
+                  A social enterprise for young leaders
+                </div>
+                <div className="link">View Project &#8594;</div>
               </div>
+
+              <div className="box-image"></div>
             </a>
             <a className="box box-4">
               <div className="box-content">
-                <div className="p-title"></div>
-                <div className="p-sub"></div>
+                <div className="p-title">Vaccine App</div>
+                <div className="p-sub">
+                  Online platform for all things prints
+                </div>
+                <div className="link">View Project &#8594;</div>
               </div>
+
+              <div className="box-image"></div>
             </a>
           </div>
         </section>
