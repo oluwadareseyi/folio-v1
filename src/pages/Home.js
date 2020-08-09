@@ -4,7 +4,7 @@ import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
-import { mobileLanding } from "../animations";
+import { mobileLanding, boxHover, boxExit } from "../animations";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
@@ -73,13 +73,17 @@ const Home = () => {
             My <br /> Projects -
           </div>
           <div className="boxes">
-            <a className="box box-1">
+            <a
+              onMouseEnter={boxHover}
+              onMouseLeave={boxExit}
+              className="box box-1"
+            >
               <div className="box-content">
-                <div className="p-title">Perxels</div>
-                <div className="p-sub">
+                <div className="box-anim p-title">Perxels</div>
+                <div className="box-anim p-sub">
                   Responsive website for a design school
                 </div>
-                <div className="link">View Project &#8594;</div>
+                <div className="box-anim link">View Project &#8594;</div>
               </div>
 
               <div className="box-image"></div>
@@ -89,13 +93,15 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="box box-2"
+              onMouseEnter={boxHover}
+              onMouseLeave={boxExit}
             >
               <div className="box-content">
-                <div className="p-title">Print Studio</div>
-                <div className="p-sub">
+                <div className="box-anim p-title">Print Studio</div>
+                <div className="box-anim p-sub">
                   Online platform for all things prints
                 </div>
-                <div className="link">View Project &#8594;</div>
+                <div className="box-anim link">View Project &#8594;</div>
               </div>
 
               <div className="box-image"></div>
@@ -105,24 +111,33 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="box box-3"
+              onMouseEnter={boxHover}
+              onMouseLeave={boxExit}
             >
               <div className="box-content">
-                <div className="p-title">Life Pith</div>
-                <div className="p-sub">
+                <div className="box-anim p-title">Life Pith</div>
+                <div className="box-anim p-sub">
                   A social enterprise for young leaders
                 </div>
-                <div className="link">View Project &#8594;</div>
+                <div className="box-anim link">View Project &#8594;</div>
               </div>
 
               <div className="box-image"></div>
             </a>
-            <a className="box box-4">
+            <a
+              href="https://vaccineapp.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={boxHover}
+              onMouseLeave={boxExit}
+              className="box box-4"
+            >
               <div className="box-content">
-                <div className="p-title">Vaccine App</div>
-                <div className="p-sub">
-                  Online platform for all things prints
+                <div className="box-anim p-title">Vaccine App</div>
+                <div className="box-anim p-sub">
+                  Landing page for a healthcare center
                 </div>
-                <div className="link">View Project &#8594;</div>
+                <div className="box-anim link">View Project &#8594;</div>
               </div>
 
               <div className="box-image"></div>

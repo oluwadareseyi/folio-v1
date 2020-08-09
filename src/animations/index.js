@@ -229,3 +229,24 @@ const animateMainShape = () => {
       ease: "expo.easeOut",
     });
 };
+
+export const boxHover = (e) => {
+  const tl = gsap.timeline();
+  tl.to(e.target.querySelectorAll(".link"), {
+    duration: 0,
+    opacity: 1,
+  }).from(e.target.querySelectorAll(".box-anim"), {
+    duration: 0.5,
+    opacity: 0,
+    y: 30,
+    stagger: 0.1,
+    ease: "Power3.easeOut",
+  });
+};
+
+export const boxExit = (e) => {
+  gsap.to(e.target.querySelectorAll(".link"), {
+    duration: 0,
+    opacity: 0,
+  });
+};
