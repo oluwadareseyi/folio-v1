@@ -254,9 +254,9 @@ const Home = () => {
         </section>
 
         <section className="contact">
-          <div className="topic">Need a designer?</div>
+          <div className="topic">Need a developer ?</div>
           <Link to="/contact">
-            <div className="title">Let's Collaborate</div>
+            <div className="title">Let's Collaborate &#8594;</div>
           </Link>
         </section>
       </div>

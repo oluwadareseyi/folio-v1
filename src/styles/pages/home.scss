@@ -713,172 +713,89 @@
             }
         }
     }
+
+    .contact {
+        padding: 120px 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include media("<=986px") {
+            padding: 120px 120px;
+        }
+
+        @include media("<=666px") {
+            padding: 120px 60px;
+        }
+
+        @include media("<=522px") {
+            padding: 120px 40px;
+        }
+
+        @include media("<=350px") {
+            padding: 120px 20px;
+        }
+
+        .topic {
+            color: $subText;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 50px;
+            letter-spacing: 0.23em;
+            text-transform: uppercase;
+
+            @include media("<=500px") {
+                font-size: 13px;
+            }
+        }
+
+        .title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 75px;
+            font-weight: 800;
+            position: relative;
+
+            @include media("<=976px") {
+                font-size: 60px;
+            }
+
+            @include media("<=850px") {
+                font-size: 50px;
+            }
+
+            @include media("<=tablet") {
+                font-size: 40px;
+            }
+
+            @include media("<=500px") {
+                font-size: 30px;
+            }
+
+            @include media("<=350px") {
+                font-size: 28px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: $white;
+                width: 0;
+                height: 5px;
+                bottom: -6px;
+                left: unset;
+                right: 0;
+                transition: width .2s linear;
+
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    right: unset;
+                }
+            }
+        }
+    }
 }
-
-
-
-// .shapes-1 {
-//     z-index: -1;
-//     opacity: 0;
-
-
-//     @include media("<764px") {
-//         display: none;
-//     }
-
-//     .shape-1 {
-//         right: 20%;
-//         top: 10%;
-//         background: none;
-//         border: 4px solid $redShape;
-//         transform: rotate(-50deg);
-//         @include semi-circle(20px);
-//     }
-
-// .shape-2 {
-//     position: absolute;
-//     left: 10%;
-//     bottom: 10%;
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         left: -20px;
-//         top: -5px;
-//         @include semi-circle(15px);
-//         background: $purpleShape;
-//         // transform: rotate(-50deg);
-//     }
-
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         background: $white;
-//         @include semi-circle(10px);
-//         transform: rotate(-180deg);
-//     }
-// }
-
-
-//     .shape-3 {
-//         position: absolute;
-//         right: percentage(randomNum(20, 30) / 100);
-//         bottom: percentage(randomNum(10, 25) / 100);
-
-//         &::before {
-//             width: 6.5px;
-//             height: 30px;
-//             content: '';
-//             position: absolute;
-//             background: $blueShape;
-//         }
-
-//         &::after {
-//             width: 6.5px;
-//             height: 20px;
-//             content: '';
-//             left: 15px;
-//             background: $white;
-//             position: absolute;
-//         }
-//     }
-
-
-//     .shape-4 {
-//         left: percentage(randomNum(16, 20) / 100);
-//         top: percentage(randomNum(20, 35) / 100);
-//         width: 20px;
-//         position: absolute;
-//         height: 20px;
-//         background: $greenShape;
-//         // transform: rotate(-50deg);
-//         border-radius: 0 100px 0 0;
-//     }
-
-
-
-//     .shape-5 {
-//         right: percentage(randomNum(10, 20) / 100);
-//         top: percentage(randomNum(50, 60) / 100);
-//         width: 20px;
-//         position: absolute;
-//         height: 20px;
-//         border: 8px solid $white;
-//         border-radius: 50%;
-//         /* Halve the circle */
-//         border-bottom-color: transparent;
-//         border-left-color: transparent;
-//         /* Rotate the circle */
-//         // transform: rotate(-45deg);
-//     }
-// }
-
-// .shapes-2 {
-//     // opacity: 0;
-
-//     @include media("<764px") {
-//         display: none;
-//     }
-
-//     .shape-1 {}
-
-//     .shape-2 {
-// position: absolute;
-// right: percentage(randomNum(15, 30) / 100);
-// bottom: percentage(randomNum(10, 25) / 100);
-
-// &::before {
-//     content: "";
-//     position: absolute;
-//     left: -10px;
-//     @include semi-circle(10px);
-//     background: $purpleShape;
-//     // transform: rotate(-50deg);
-// }
-
-// &::after {
-//     content: "";
-//     position: absolute;
-//     background: $white;
-//     @include semi-circle(10px);
-//     transform: rotate(-180deg);
-// }
-//     }
-
-//     .shape-3 {
-//         left: percentage(randomNum(10, 20) / 100);
-//         top: percentage(randomNum(10, 30) / 100);
-//         width: 20px;
-//         position: absolute;
-//         height: 20px;
-//         background: $white;
-//         // transform: rotate(-50deg);
-//         border-radius: 0 0 0 100px;
-//     }
-
-
-
-//     .shape-4 {
-//         position: absolute;
-//         right: percentage(randomNum(20, 50) / 100);
-//         bottom: percentage(randomNum(25, 48) / 100);
-
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             left: -14px;
-//             top: 5px;
-//             @include semi-circle(8px);
-//             background: $pinkShape;
-//             transform: rotate(-180deg);
-//         }
-
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             background: $pinkShape;
-//             @include semi-circle(13px);
-//             transform: rotate(-180deg);
-//         }
-//     }
-// }
