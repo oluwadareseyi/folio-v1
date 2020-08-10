@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import PreLoader from "../components/PreLoader";
+// import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
@@ -26,7 +26,7 @@ const Home = () => {
 
       <div className="landing">
         <section className="landing__top">
-          <div className="sub">Software Developer</div>
+          <div className="sub">Front-End Developer</div>
           <h1 className="landing__main">
             <span className="text-con">
               {text1.split("").map((t, i) => (
@@ -77,6 +77,7 @@ const Home = () => {
               onMouseEnter={boxHover}
               onMouseLeave={boxExit}
               className="box box-1"
+              href="/"
             >
               <div className="box-content">
                 <div className="box-anim p-title">Perxels</div>
@@ -143,6 +144,15 @@ const Home = () => {
               <div className="box-image"></div>
             </a>
           </div>
+          <a
+            href="https://codepen.io/oluwadareseyi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="more">
+              <div className="btn-content">View more projects</div>
+            </button>
+          </a>
         </section>
       </div>
     </>

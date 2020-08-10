@@ -33,3 +33,16 @@ $pinkShape: #ff61bc;
 
 // portfolio boxes
 $boxBlue: #2a6ef0;
+
+
+
+@mixin button {
+    outline: none;
+    border: transparent;
+    // border-radius: 5px;
+    cursor: pointer;
+    // font-weight: 600;
+    text-transform: capitalize;
+    color: $white;
+    padding: 20px 30px;
+}

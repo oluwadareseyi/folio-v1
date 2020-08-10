@@ -248,6 +248,7 @@
     &__work {
         background: $blackSec;
         padding: 90px 60px;
+        position: relative;
 
         @include media("<=986px") {
             padding: 90px 120px;
@@ -261,7 +262,7 @@
             padding: 90px 40px;
         }
 
-        @include media("<=400px") {
+        @include media("<=350px") {
             padding: 90px 20px;
         }
 
@@ -271,6 +272,59 @@
 
             @include media("<=522px") {
                 font-size: 45px;
+            }
+        }
+
+        button {
+            @include button;
+            background: transparent;
+            position: absolute;
+            right: 18%;
+            text-transform: none;
+            font-weight: 600;
+            bottom: 6%;
+            font-size: 14px;
+            color: $blueShape;
+            border: 1px solid $blueShape;
+            transition: color .2s linear;
+
+            &:hover {
+                color: $white;
+
+
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    right: unset;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                top: 0;
+                bottom: 0;
+                left: unset;
+                right: 0;
+                height: 100%;
+                transition: all .2s linear;
+
+                // z-index: -1;
+                background: $blueShape;
+            }
+
+
+            @include media("<=986px") {
+                position: static;
+                display: block;
+                margin: 0 auto;
+                margin-top: 60px;
+            }
+
+            .btn-content {
+                position: relative;
+                z-index: 1;
             }
         }
 
@@ -311,7 +365,8 @@
             }
 
             @include media("<=phone") {
-                height: 550px;
+                height: 470px;
+                padding-left: 10px;
             }
 
 
@@ -409,6 +464,10 @@
                     @include media("<=522px") {
                         font-size: 30px;
                     }
+
+                    @include media("<=phone") {
+                        padding-right: 0;
+                    }
                 }
 
 
@@ -418,9 +477,11 @@
         .box-1 {
             background: $purpleShape;
 
-            margin-top: 120px;
+            margin-top: 130px;
 
-            @include media("<=986px") {}
+            @include media("<=986px") {
+                margin-top: 100px;
+            }
 
 
             .box-image {
@@ -464,7 +525,7 @@
         .box-4 {
             // background: $redShape;
             background: rgb(232, 49, 81);
-            margin-top: -120px;
+            margin-top: -130px;
 
             @include media("<=986px") {
                 margin-top: 0;
