@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
 import { mobileLanding, boxHover, boxExit } from "../animations";
@@ -20,7 +20,7 @@ const Home = () => {
       {/* <PreLoader /> */}
 
       <motion.div
-        exit={{ height: "100%", transition }}
+        exit={{ height: "100vh", transition }}
         className="transition2"
       />
 
@@ -251,6 +251,13 @@ const Home = () => {
               </div>
             </a>
           </div>
+        </section>
+
+        <section className="contact">
+          <div className="topic">Need a designer?</div>
+          <Link to="/contact">
+            <div className="title">Let's Collaborate</div>
+          </Link>
         </section>
       </div>
     </>

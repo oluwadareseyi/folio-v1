@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeUp } from "../animations";
+import gsap from "gsap";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
@@ -8,6 +9,10 @@ const About = () => {
   useEffect(() => {
     document.title = "Seyi — About Me";
     fadeUp(".about .text", 0.8);
+    gsap.to(".cursor", {
+      duration: 0,
+      css: { display: "none" },
+    });
   }, []);
   return (
     <>

@@ -27,7 +27,6 @@ function App() {
 
     // To stop the app from flashing, we hide the entire body in the css and then show it when the JavaScript loads.
     gsap.to("body", 0, { css: { visibility: "visible" } });
-
     // custom cursor
     const cursorList = document.addEventListener("mousemove", (e) => {
       cursorRef.current.setAttribute(
