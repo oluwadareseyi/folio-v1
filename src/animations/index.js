@@ -232,21 +232,25 @@ const animateMainShape = () => {
 
 export const boxHover = (e) => {
   const tl = gsap.timeline();
-  tl.to(e.target.querySelectorAll(".link"), {
-    duration: 0,
-    opacity: 1,
-  }).from(e.target.querySelectorAll(".box-anim"), {
-    duration: 0.5,
-    opacity: 0,
-    y: 30,
-    stagger: 0.1,
-    ease: "Power3.easeOut",
-  });
+  window.innerWidth >= 986 &&
+    tl
+      .to(e.target.querySelector(".link"), {
+        duration: 0,
+        opacity: 1,
+      })
+      .from(e.target.querySelectorAll(".box-anim"), {
+        duration: 0.2,
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        ease: "Power3.easeOut",
+      });
 };
 
 export const boxExit = (e) => {
-  gsap.to(e.target.querySelectorAll(".link"), {
-    duration: 0,
-    opacity: 0,
-  });
+  window.innerWidth >= 986 &&
+    gsap.to(e.target.querySelector(".link"), {
+      duration: 0,
+      opacity: 0,
+    });
 };

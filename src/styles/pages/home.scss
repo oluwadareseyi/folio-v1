@@ -105,6 +105,7 @@
         }
 
         .landing__main2 {
+            font-weight: 800;
             @extend .landing__main;
             display: none;
 
@@ -248,9 +249,29 @@
         background: $blackSec;
         padding: 90px 60px;
 
+        @include media("<=986px") {
+            padding: 90px 120px;
+        }
+
+        @include media("<=666px") {
+            padding: 90px 60px;
+        }
+
+        @include media("<=522px") {
+            padding: 90px 40px;
+        }
+
+        @include media("<=400px") {
+            padding: 90px 20px;
+        }
+
         .title {
             font-weight: 800;
             font-size: 55px;
+
+            @include media("<=522px") {
+                font-size: 45px;
+            }
         }
 
         .boxes {
@@ -258,6 +279,16 @@
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             grid-column-gap: 75px;
             grid-row-gap: 60px;
+
+            @include media("<=1040px") {
+                grid-column-gap: 50px;
+            }
+
+            @include media("<=600px") {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
+
+
         }
 
 
@@ -266,6 +297,22 @@
             position: relative;
             overflow: hidden;
             padding: 0 20px;
+
+            @include media("<=986px") {
+                height: 730px;
+            }
+
+            @include media("<=800px") {
+                height: 620px;
+            }
+
+            @include media("<=522px") {
+                height: 580px;
+            }
+
+            @include media("<=phone") {
+                height: 550px;
+            }
 
 
             .box-image {
@@ -292,11 +339,19 @@
             &:hover {
                 &::after {
                     opacity: 1;
+
+                    @include media("<=986px") {
+                        opacity: 0;
+                    }
                 }
 
                 .link {
                     color: $subText;
                     opacity: 1;
+
+                    @include media("<=986px") {
+                        color: $black;
+                    }
                 }
 
                 .box-image {
@@ -309,6 +364,10 @@
                 margin-top: 20px;
                 opacity: 0;
                 color: $black;
+
+                @include media("<=986px") {
+                    opacity: 1;
+                }
             }
 
 
@@ -319,11 +378,20 @@
                 z-index: 2;
                 position: relative;
 
+                @include media("<=522px") {
+                    padding-right: 10px;
+                }
+
                 .p-title {
                     text-transform: uppercase;
                     font-weight: 800;
                     letter-spacing: 3px;
                     font-size: 18px;
+
+                    @include media("<=522px") {
+                        font-size: 17px;
+                    }
+
                 }
 
                 .p-sub {
@@ -333,6 +401,14 @@
                     padding-right: 60px;
                     margin-top: 20px;
                     line-height: 1.2;
+
+                    @include media("<=666px") {
+                        font-size: 34px;
+                    }
+
+                    @include media("<=522px") {
+                        font-size: 30px;
+                    }
                 }
 
 
@@ -343,6 +419,8 @@
             background: $purpleShape;
 
             margin-top: 120px;
+
+            @include media("<=986px") {}
 
 
             .box-image {
@@ -387,6 +465,10 @@
             // background: $redShape;
             background: rgb(232, 49, 81);
             margin-top: -120px;
+
+            @include media("<=986px") {
+                margin-top: 0;
+            }
         }
     }
 }

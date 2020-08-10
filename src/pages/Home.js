@@ -135,7 +135,7 @@ const Home = () => {
               <div className="box-content">
                 <div className="box-anim p-title">Vaccine App</div>
                 <div className="box-anim p-sub">
-                  Landing page for a healthcare center
+                  Landing page for a health center
                 </div>
                 <div className="box-anim link">View Project &#8594;</div>
               </div>
