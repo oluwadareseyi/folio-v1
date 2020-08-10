@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./styles/App.scss";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 import { Route, Switch, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import Header from "./components/Header";
@@ -12,7 +12,7 @@ import { AnimatePresence } from "framer-motion";
 const pages = [
   { path: "/", pathName: "Home", Component: Home },
   { path: "/about", pathName: "About", Component: About },
-  { path: "/services", pathName: "Services", Component: Services },
+  { path: "/contact", pathName: "Contact", Component: Contact },
 ];
 
 function App() {

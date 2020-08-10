@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-// import PreLoader from "../components/PreLoader";
+import PreLoader from "../components/PreLoader";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
@@ -8,7 +8,7 @@ import { mobileLanding, boxHover, boxExit } from "../animations";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
-const text1 = "I build web solutions";
+const text1 = "I curate experiences";
 const text2 = "with technology.";
 const Home = () => {
   useEffect(() => {
@@ -43,7 +43,7 @@ const Home = () => {
             </span>
           </h1>
           <h1 className="landing__main2">
-            I build web solutions <br /> with technology.
+            I curate experiences <br /> with technology.
           </h1>
           <div className="links">
             <NavLink className="item" to="/about">
@@ -153,6 +153,104 @@ const Home = () => {
               <div className="btn-content">View more projects</div>
             </button>
           </a>
+        </section>
+
+        <section className="find-me">
+          <div className="title">
+            On The <br /> Web{" "}
+            <span role="img" aria-label="find-emoji">
+              🔎
+            </span>
+          </div>
+          <div className="topic">PS: I also write, sometimes.</div>
+
+          <div className="social-boxes">
+            <a
+              href="https://github.com/oluwadareseyi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box github"
+            >
+              <div className="content">
+                <i class="fab fa-github-alt"></i>
+                <div className="items">
+                  <div className="name">Github</div>
+                  <div className="user">/oluwadareseyi</div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://twitter.com/seyi__xo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box twitter"
+            >
+              <div className="content">
+                <i class="fab fa-twitter"></i>
+                <div className="items">
+                  <div className="name">Twitter</div>
+                  <div className="user">/seyi__xo</div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://codepen.io/oluwadareseyi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box codepen"
+            >
+              <div className="content">
+                <i class="fab fa-codepen"></i>
+                <div className="items">
+                  <div className="name">Codepen</div>
+                  <div className="user">/oluwadareseyi</div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://dev.to/oluwadareseyi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box devto"
+            >
+              <div className="content">
+                <i class="fab fa-dev"></i>
+                <div className="items">
+                  <div className="name">Dev</div>
+                  <div className="user">/oluwadareseyi</div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/oluwadareseyi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box linkedin"
+            >
+              <div className="content">
+                <i class="fab fa-linkedin-in"></i>
+                <div className="items">
+                  <div className="name">Linkedin</div>
+                  <div className="user">/oluwadareseyi</div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/seyii.dare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="box instagram"
+            >
+              <div className="content">
+                <i class="fab fa-instagram"></i>
+                <div className="items">
+                  <div className="name">Instagram</div>
+                  <div className="user">/seyii.dare</div>
+                </div>
+              </div>
+            </a>
+          </div>
         </section>
       </div>
     </>

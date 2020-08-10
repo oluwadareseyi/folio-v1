@@ -4,7 +4,7 @@ import { fadeUp } from "../animations";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
-const Services = () => {
+const Contact = () => {
   useEffect(() => {
     document.title = "Seyi — Services";
     fadeUp(".services .text", 0.8);
@@ -25,10 +25,10 @@ const Services = () => {
         }}
         className="services"
       >
-        <div className="text">This is the services page</div>
+        <div className="text">This is the contact page</div>
       </motion.div>
     </>
   );
 };
 
-export default Services;
+export default Contact;
