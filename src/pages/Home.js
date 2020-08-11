@@ -5,6 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
 import { mobileLanding, boxHover, boxExit } from "../animations";
+import Footer from "../components/Footer";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
@@ -259,6 +260,9 @@ const Home = () => {
             <div className="title">Let's Collaborate &#8594;</div>
           </Link>
         </section>
+
+        {/* footer exported as component */}
+        <Footer />
       </div>
     </>
   );
