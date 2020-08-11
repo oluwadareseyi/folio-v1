@@ -254,3 +254,21 @@ export const boxExit = (e) => {
       opacity: 0,
     });
 };
+
+export const fadeIn = (el) => {
+  gsap.to(el, {
+    duration: 2,
+    opacity: 1,
+    y: -60,
+    ease: "power4.out",
+  });
+};
+
+export const fadeOut = (el) => {
+  gsap.to(el, {
+    duration: 1,
+    opacity: 0,
+    y: -20,
+    ease: "power4.out",
+  });
+};

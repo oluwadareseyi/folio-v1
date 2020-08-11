@@ -43,7 +43,6 @@
             text-align: left;
             padding-bottom: 80px;
             // padding-right: 120px;
-
         }
 
         @include media("<=600px") {
@@ -269,6 +268,7 @@
         .title {
             font-weight: 800;
             font-size: 55px;
+            opacity: 0;
 
             @include media("<=522px") {
                 font-size: 45px;
@@ -335,6 +335,10 @@
             grid-column-gap: 75px;
             grid-row-gap: 60px;
 
+            @include media(">1300px") {
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            }
+
             @include media("<=1040px") {
                 grid-column-gap: 50px;
             }
@@ -352,6 +356,12 @@
             position: relative;
             overflow: hidden;
             padding: 0 20px;
+            opacity: 0;
+
+
+            @include media(">1300px") {
+                height: 710px;
+            }
 
             @include media("<=986px") {
                 height: 730px;
@@ -477,7 +487,6 @@
 
         .box-1 {
             background: $purpleShape;
-
             margin-top: 130px;
 
             @include media("<=986px") {
@@ -630,7 +639,7 @@
                     &::after {
                         top: 14px;
                         left: -12px;
-                        border: none; 
+                        border: none;
                     }
                 }
 

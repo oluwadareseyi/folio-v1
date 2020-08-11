@@ -1,21 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
 import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
-import { mobileLanding, boxHover, boxExit } from "../animations";
+import {
+  mobileLanding,
+  boxHover,
+  boxExit,
+  fadeIn,
+  fadeOut,
+} from "../animations";
 import Footer from "../components/Footer";
+import { useIntersection } from "react-use";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
 const text1 = "I curate experiences";
 const text2 = "with technology.";
+
+// custom hook built on top of the intersection hook.
+const useMyIntersection = (el, name) => {
+  const section = useIntersection(el, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  });
+
+  section && !section.isIntersecting && section.boundingClientRect.y > 0
+    ? fadeOut(name)
+    : fadeIn(name);
+};
+
 const Home = () => {
   useEffect(() => {
     document.title = "Seyi — Developer";
     mobileLanding();
   }, []);
+
+  const boxesTitle = useRef(null);
+  const box1 = useRef(null);
+  const box2 = useRef(null);
+  const box3 = useRef(null);
+  const box4 = useRef(null);
+
+  useMyIntersection(box1, ".box-1");
+  useMyIntersection(box2, ".box-2");
+  useMyIntersection(box3, ".box-3");
+  useMyIntersection(box4, ".box-4");
+  useMyIntersection(boxesTitle, ".landing__work .title");
+
   return (
     <>
       {/* <PreLoader /> */}
@@ -70,11 +104,12 @@ const Home = () => {
         </section>
 
         <section className="landing__work">
-          <div className="title">
+          <div ref={boxesTitle} className="title">
             My <br /> Projects -
           </div>
           <div className="boxes">
             <a
+              ref={box1}
               onMouseEnter={boxHover}
               onMouseLeave={boxExit}
               className="box box-1"
@@ -91,6 +126,7 @@ const Home = () => {
               <div className="box-image"></div>
             </a>
             <a
+              ref={box2}
               href="https://printstudio.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
@@ -109,6 +145,7 @@ const Home = () => {
               <div className="box-image"></div>
             </a>
             <a
+              ref={box3}
               href="https://www.lifepith.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -127,6 +164,7 @@ const Home = () => {
               <div className="box-image"></div>
             </a>
             <a
+              ref={box4}
               href="https://vaccineapp.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
@@ -173,7 +211,7 @@ const Home = () => {
               className="box github"
             >
               <div className="content">
-                <i class="fab fa-github-alt"></i>
+                <i className="fab fa-github-alt"></i>
                 <div className="items">
                   <div className="name">Github</div>
                   <div className="user">/oluwadareseyi</div>
@@ -187,7 +225,7 @@ const Home = () => {
               className="box twitter"
             >
               <div className="content">
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
                 <div className="items">
                   <div className="name">Twitter</div>
                   <div className="user">/seyi__xo</div>
@@ -201,7 +239,7 @@ const Home = () => {
               className="box codepen"
             >
               <div className="content">
-                <i class="fab fa-codepen"></i>
+                <i className="fab fa-codepen"></i>
                 <div className="items">
                   <div className="name">Codepen</div>
                   <div className="user">/oluwadareseyi</div>
@@ -215,7 +253,7 @@ const Home = () => {
               className="box devto"
             >
               <div className="content">
-                <i class="fab fa-dev"></i>
+                <i className="fab fa-dev"></i>
                 <div className="items">
                   <div className="name">Dev</div>
                   <div className="user">/oluwadareseyi</div>
@@ -230,7 +268,7 @@ const Home = () => {
               className="box linkedin"
             >
               <div className="content">
-                <i class="fab fa-linkedin-in"></i>
+                <i className="fab fa-linkedin-in"></i>
                 <div className="items">
                   <div className="name">Linkedin</div>
                   <div className="user">/oluwadareseyi</div>
@@ -244,7 +282,7 @@ const Home = () => {
               className="box instagram"
             >
               <div className="content">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
                 <div className="items">
                   <div className="name">Instagram</div>
                   <div className="user">/seyii.dare</div>
