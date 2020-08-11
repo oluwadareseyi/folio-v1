@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import PreLoader from "../components/PreLoader";
 import { NavLink, Link } from "react-router-dom";

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { openMenu, closeMenu } from "../animations";
-import gsap from "gsap";
 
 const Header = ({ history }) => {
   const [menuOpen, setMenuOpen] = useState(false);
