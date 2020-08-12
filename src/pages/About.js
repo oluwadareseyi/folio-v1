@@ -41,7 +41,7 @@ const About = () => {
         animate={{
           height: "100%",
           visibility: "visible",
-          transition: { ...transition, duration: 1, delay: -0.2 },
+          transition: { ...transition, duration: 2, delay: -0.2 },
         }}
         className="about"
       >
@@ -57,7 +57,7 @@ const About = () => {
                 design and technology.
               </p>
               <p>
-                I have always put forward the idea of a minimalistic and
+                I have always supported the idea of a minimalistic and
                 user-focused approach to design and development, which I indeed
                 imbibe when building scalable and fully responsive web
                 applications.
@@ -67,8 +67,123 @@ const About = () => {
               href="https://drive.google.com/uc?export=download&id=1atxrM3opQtRyJkosCD0MYt_lskoT_NRv"
               download
             >
-              <i class="fas fa-file-alt"></i> Download Resume
+              <i className="fas fa-file-alt"></i> Download Resume
             </a>
+          </div>
+
+          <div className="about__bottom">
+            <div className="experience">
+              <div className="stack main-title">
+                <span>Stack.</span>
+              </div>
+
+              <div className="companies">
+                <div className="company">
+                  <div className="name tech">Core Tech:</div>
+                  <ul className="tasks">
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>CSS</li>
+                    <li>SCSS</li>
+                    <li>GSAP</li>
+                    <li>Framer Motion</li>
+                    <li>CSS-in-JS</li>
+                    <li>Node</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                  </ul>
+                </div>
+
+                <div className="company">
+                  <div className="name tech">Familiar:</div>
+                  <ul className="tasks">
+                    <li>React Native</li>
+                    <li>Vue.js</li>
+                    <li>MySQL</li>
+                    <li>GraphQL</li>
+                    <li>PWAs</li>
+                  </ul>
+                </div>
+
+                <div className="company">
+                  <div className="name tech">On The Job:</div>
+                  <ul className="tasks">
+                    <li>Testing.</li>
+                    <li>Version Control.</li>
+                    <li>
+                      JavaScript best practices, clean code and ES6+ knowledge.
+                    </li>
+                    <li>Continuous Integration/Development.</li>
+                    <li>Responsive Design.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="experience">
+              <div className="main-title">
+                <span>experience.</span>
+              </div>
+
+              <div className="companies">
+                <div className="company">
+                  <div className="name">Ijaya Comics</div>
+                  <div className="year">Feb 2020 - Today</div>
+                  <ul className="tasks">
+                    <li>
+                      Worked with other developers and founders to create the
+                      best possible product for our readers.
+                    </li>
+                    <li>
+                      Built an impregnable multi-role user authentication
+                      system.
+                    </li>
+                    <li>
+                      Worked with UI/UX designers to create clean, reusable
+                      components with React.
+                    </li>
+                    <li>
+                      Built a client-side, dynamic routing system with
+                      safeguards.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="company">
+                  <div className="name">Pith Africa - CFO</div>
+                  <div className="year">Dec 2019 - Today</div>
+                  <ul className="tasks">
+                    <li>
+                      Built temporary product pages on the front-end and
+                      automated user responses on order.
+                    </li>
+
+                    <li>
+                      Heavily Involved in the planning and design of our coming
+                      online store.
+                    </li>
+
+                    <li>
+                      Improved the design and overall accessibility of pages.
+                    </li>
+                    <li>
+                      Overseeing our finances and Involved in the day to day
+                      running of our brand.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="company">
+                  <div className="name">Life Pith (NGO)</div>
+                  <div className="year">April 2020 - Today</div>
+                  <ul className="tasks">
+                    <li>
+                      Carried out design planning and built up the landing page
+                      from scratch.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <Footer />
         </div>

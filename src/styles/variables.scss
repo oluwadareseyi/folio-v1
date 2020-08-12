@@ -50,7 +50,7 @@ $boxBlue: #2a6ef0;
 
 @mixin textUnderline($color) {
     background: linear-gradient(0deg, rgba(255, 0, 255, 0) 0%, rgba(255, 0, 255, 0) 16%, $color 16%, $color 32%, rgba(255, 0, 255, 0) 10%);
-    padding: 0 0 .05em 0;
+    padding: .2em 0.1em;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
