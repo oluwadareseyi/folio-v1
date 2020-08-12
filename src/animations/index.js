@@ -47,6 +47,7 @@ export const preLoaderAnim = () => {
         duration: 1.5,
         height: "0vh",
         ease: "Power3.easeOut",
+        onComplete: mobileLanding(),
       },
       "-=2"
     )
@@ -159,7 +160,7 @@ export const mobileLanding = () => {
   window.innerWidth < 763 &&
     tl.from(".landing__main2", {
       duration: 1,
-      delay: 6.2,
+      delay: 0,
       opacity: 0,
       y: 80,
       ease: "expo.easeOut",

@@ -39,7 +39,6 @@ const Home = () => {
       left: 0,
     });
     document.title = "Seyi — Developer";
-    mobileLanding();
   }, []);
 
   const boxesTitle = useRef(null);
