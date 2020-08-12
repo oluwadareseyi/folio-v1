@@ -56,7 +56,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <PreLoader /> */}
+      <PreLoader />
 
       <motion.div
         exit={{ height: "100vh", transition }}
