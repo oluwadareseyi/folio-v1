@@ -4,13 +4,7 @@ import PreLoader from "../components/PreLoader";
 import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
-import {
-  mobileLanding,
-  boxHover,
-  boxExit,
-  fadeIn,
-  fadeOut,
-} from "../animations";
+import { boxHover, boxExit, fadeIn, fadeOut } from "../animations";
 import Footer from "../components/Footer";
 import { useIntersection } from "react-use";
 
