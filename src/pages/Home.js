@@ -34,6 +34,10 @@ const useMyIntersection = (el, name) => {
 
 const Home = () => {
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     document.title = "Seyi — Developer";
     mobileLanding();
   }, []);
@@ -52,7 +56,7 @@ const Home = () => {
 
   return (
     <>
-      <PreLoader />
+      {/* <PreLoader /> */}
 
       <motion.div
         exit={{ height: "100vh", transition }}

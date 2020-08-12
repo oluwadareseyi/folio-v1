@@ -22,7 +22,7 @@ const Footer = () => {
             <p>
               <a
                 data-text="oluwadareseyii@gmail.com"
-                href="mailto:oluwadareseyii@gmai.com"
+                href="mailto:oluwadareseyii@gmail.com"
               >
                 oluwadareseyii@gmail.com
               </a>

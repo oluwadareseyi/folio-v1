@@ -1,13 +1,68 @@
+body {
+    background: $blueBlack;
+}
+
 .about {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    font-weight: 800;
-    font-size: 30px;
     background: $blueBlack;
     color: $white;
     z-index: 2;
+
+    &__inner {}
+
+    &__top {
+        padding: 170px 200px;
+        padding-right: 450px;
+        padding-top: 180px;
+        background: $blueBlack;
+
+
+        .my-name {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 55px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                height: 5px;
+                width: 40px;
+                background: $purpleShape;
+                top: -20px;
+                left: -50px;
+            }
+        }
+
+        .desc {
+            margin-top: 20px;
+            color: $subText;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        a {
+            font-weight: 500;
+            transition: color .2s linear;
+
+            &:hover {
+                color: $red;
+            }
+
+            i {
+                margin-right: 8px;
+                transition: color .1s linear;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
 }

@@ -7,6 +7,10 @@ const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
 const Contact = () => {
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     document.title = "Seyi — Services";
     fadeUp(".services .text", 0.8);
     gsap.to(".cursor", {

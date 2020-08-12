@@ -1,5 +1,6 @@
 .main-footer {
     padding: 50px 100px;
+    background: $blueBlack;
     padding-bottom: 50px;
 
     @include media("<=tablet") {
