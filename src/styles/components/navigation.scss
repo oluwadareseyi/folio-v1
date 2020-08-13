@@ -1,3 +1,19 @@
+.active-link {
+    opacity: 1 !important;
+    // position: relative;
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     background: $white;
+    //     width: 60px;
+    //     height: 7px;
+    //     left: -70px;
+    //     top: 45%;
+    //     transition: all .2s linear;
+    // }
+}
+
 .hamburger-menu {
     z-index: 3;
     top: 0;
@@ -9,44 +25,6 @@
     display: none;
     cursor: none;
 
-    .nav-primary {
-        position: relative;
-        height: 0;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: $red;
-        z-index: 1;
-        overflow: hidden;
-
-        .nav-content {
-            position: relative;
-            top: 100px;
-            font-weight: 800;
-            font-size: 45px;
-            color: $white;
-            padding: 0 80px;
-            z-index: 0;
-
-            @include media("<=phone") {
-                padding: 0 40px;
-            }
-
-            .nav-links {
-                text-align: right;
-            }
-
-            .nav-link {
-                margin-bottom: 10px;
-
-                a {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
     .nav-secondary {
         overflow: hidden;
         height: 0;
@@ -57,5 +35,75 @@
         top: 0;
         bottom: 0;
         right: 0;
+    }
+
+    .nav-primary {
+        position: relative;
+        height: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: $red;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        .nav-content {
+            position: relative;
+            top: 120px;
+            color: $white;
+            // padding: 0 80px;
+            z-index: 0;
+
+            .nav-title {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                margin-bottom: 30px;
+            }
+
+            // @include media("<=phone") {
+            //     padding: 0 40px;
+            // }
+
+            .nav-links {
+                // text-align: right;
+                // font-family: 'Manrope', sans-serif;
+                text-align: center;
+                font-weight: 800;
+                font-size: 48px;
+
+                @include media("<=tablet") {
+                    font-size: 38px;
+                }
+            }
+
+            .nav-link {
+                margin-bottom: 5px;
+
+                a {
+                    transition: all .2s linear;
+                    opacity: 0.9;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                @include media("<=tablet") {
+                    opacity: 1;
+                }
+
+
+
+
+                a {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }

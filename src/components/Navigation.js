@@ -6,12 +6,52 @@ const Navigation = () => {
     <div className="hamburger-menu">
       <div className="nav-primary">
         <div className="nav-content">
+          <div className="nav-title">Menu</div>
           <div className="nav-links">
             <div className="nav-link">
-              <NavLink to="/about">About</NavLink>
+              <NavLink exact activeClassName="active-link" to="/">
+                Home
+              </NavLink>
             </div>
             <div className="nav-link">
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink activeClassName="active-link" to="/about">
+                About me
+              </NavLink>
+            </div>
+            <div className="nav-link">
+              <NavLink activeClassName="active-link" to="/contact">
+                Contact
+              </NavLink>
+            </div>
+
+            <div className="nav-link">
+              <a
+                href="https://www.github.com/oluwadareseyi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </div>
+
+            <div className="nav-link">
+              <a
+                href="https://www.linkedin.com/in/oluwadareseyi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Linkedin
+              </a>
+            </div>
+
+            <div className="nav-link">
+              <a
+                href="https://dev.to/oluwadareseyi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blog
+              </a>
             </div>
           </div>
         </div>

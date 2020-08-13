@@ -110,7 +110,20 @@ export const openMenu = () => {
         amount: 0.1,
       },
       ease: "power3.inOut",
-    });
+    })
+    .from(
+      ".nav-link",
+      {
+        duration: 0.5,
+        x: -80,
+        opacity: 0,
+        stagger: {
+          amount: 0.5,
+        },
+        ease: "Power3.in",
+      },
+      "-=.3"
+    );
 
   // change cursor color when nav is open
   // tl.to(".cursor", {
