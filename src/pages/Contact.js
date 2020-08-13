@@ -70,7 +70,7 @@ const Contact = () => {
                     placeholder="What's Your Email?"
                     name="email"
                     id="email"
-                    type="text"
+                    type="email"
                     required
                   />
                 </div>
