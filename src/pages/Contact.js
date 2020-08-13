@@ -15,7 +15,7 @@ const Contact = () => {
 
     gsap.from(".services__inner", {
       duration: 0.2,
-      delay: 0.8,
+      delay: 1,
       opacity: 0,
       ease: "Power4.out",
     });
@@ -24,6 +24,10 @@ const Contact = () => {
       css: { display: "none" },
     });
   }, []);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <motion.div initial={{ height: "100vh" }} className="transition" />
@@ -47,7 +51,7 @@ const Contact = () => {
               Got a question, proposal or project or want to work <br />{" "}
               together on something? Feel free to reach out.
             </div>
-            <form action="">
+            <form onSubmit={onSubmit}>
               <div className="input-row">
                 <div className="side">
                   <label htmlFor="name">Your Name</label>
