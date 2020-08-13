@@ -19,7 +19,9 @@ const Header = ({ history }) => {
   return (
     <div className="header">
       <div className="logo">
-        <Link to="/">Oluwaseyi.</Link>
+        <Link to="/">
+          <img src={require("../assets/images/seyilogo2.png")} alt="" />
+        </Link>
       </div>
       <div
         onClick={() => setMenuOpen(!menuOpen)}
