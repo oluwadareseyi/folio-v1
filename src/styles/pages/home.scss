@@ -498,7 +498,7 @@
                 top: -30%;
                 width: 100%;
                 height: 100%;
-                background: url("../../assets/images/perxels-mockup.png") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597339831/Portfolio/img-1_xe9bzz.png") no-repeat;
                 background-size: contain;
                 // background-position: 50% 50%;
             }
@@ -508,13 +508,13 @@
             background: $boxBlue;
 
             .box-image {
-                width: 100%;
+                width: 110%;
                 height: 100%;
-                background: url("../../assets/images/pstudio2.jpg") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597345617/Portfolio/img-2_q7ekzu.png") no-repeat;
                 background-size: contain;
                 // background-position: 20% 0;
-                margin-left: 50px;
-                margin-top: 20px;
+                // margin-left: 50px;
+                margin-top: 40px;
             }
         }
 
@@ -524,7 +524,7 @@
             .box-image {
                 width: 150%;
                 height: 100%;
-                background: url("../../assets/images/lp1.webp") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597339858/Portfolio/img-3_uddkbc.png") no-repeat;
                 background-size: contain;
                 // background-position: 20% 0;
                 // margin-left: -60px;
@@ -536,6 +536,16 @@
             // background: $redShape;
             background: rgb(232, 49, 81);
             margin-top: -130px;
+
+            .box-image {
+                width: 115%;
+                height: 100%;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597345646/Portfolio/img-4_klotuu.jpg") no-repeat;
+                background-size: contain;
+                // background-position: 20% 0;
+                margin-left: 30px;
+                margin-top: 20px;
+            }
 
             @include media("<=986px") {
                 margin-top: 0;
