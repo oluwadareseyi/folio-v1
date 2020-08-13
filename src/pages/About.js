@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { fadeUp } from "../animations";
+// import { fadeUp } from "../animations";
 import gsap from "gsap";
 import Footer from "../components/Footer";
 
@@ -13,10 +13,10 @@ const About = () => {
       left: 0,
     });
     document.title = "Seyi — About Me";
-    fadeUp(".about-inner", 0.8);
+    // fadeUp(".about-inner", 0.8);
     gsap.from(".about__inner", {
       duration: 0.2,
-      delay: 0.8,
+      delay: 1,
       opacity: 0,
       ease: "Power4.out",
     });
