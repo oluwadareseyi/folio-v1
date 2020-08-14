@@ -97,6 +97,10 @@ export const openMenu = () => {
     duration: 0,
     css: { display: "block" },
   })
+    .to(".header-item", {
+      duration: 0,
+      css: { background: "none" },
+    })
     .to("body", {
       duration: 0.1,
       css: { overflowY: "hidden" },
@@ -147,6 +151,10 @@ export const closeMenu = () => {
         amount: 0.1,
       },
       ease: "power3.inOut",
+    })
+    .to(".header-item", {
+      duration: 0.5,
+      css: { background: "rgba(11,11,15,.8)" },
     })
     .to(".hamburger-menu", {
       duration: 0,

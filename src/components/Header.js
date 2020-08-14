@@ -18,14 +18,14 @@ const Header = ({ history }) => {
   }, [menuOpen, history]);
   return (
     <div className="header">
-      <div className="logo">
+      <div className="logo header-item">
         <Link to="/">
           <img src={require("../assets/images/seyilogo2.png")} alt="" />
         </Link>
       </div>
       <div
         onClick={() => setMenuOpen(!menuOpen)}
-        className={`hamburger${menuOpen ? "__active" : ""}`}
+        className={`hamburger${menuOpen ? "__active" : ""} header-item`}
       >
         <div className="hamburger-icon"></div>
       </div>
