@@ -317,7 +317,9 @@
 
 
             @include media("<=986px") {
-                position: static;
+                position: relative;
+                left: unset;
+                right: unset;
                 display: block;
                 margin: 0 auto;
                 margin-top: 60px;
