@@ -88,6 +88,7 @@ const About = () => {
                     <li>GSAP</li>
                     <li>Framer Motion</li>
                     <li>CSS-in-JS</li>
+                    <li>Firebase</li>
                     <li>Node</li>
                     <li>Express</li>
                     <li>MongoDB</li>
