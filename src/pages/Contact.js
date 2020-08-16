@@ -1,11 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import Footer from "../components/Footer";
+import emailjs from "emailjs-com";
+import Spinner from "../components/UI/Spinner/Spinner";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
+const initialForm = {
+  name: "",
+  email: "",
+  message: "",
+};
+
 const Contact = () => {
+  const [formState, setFormState] = useState(initialForm);
+  const [buttonMessage, setButtonMessage] = useState("Send Message.");
+  const [loading, setLoading] = useState(false);
+
+  const { name, email, message } = formState;
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -25,8 +38,28 @@ const Contact = () => {
     });
   }, []);
 
-  const onSubmit = (e) => {
+  const onChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormState({ ...formState, [name]: value });
+  };
+
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+    const service_id = "seyi";
+    const template_id = "template_ApqxOaqA";
+    const userId = "user_eOBOisCXugGWT5OU5ODq5";
+    try {
+      setLoading(true);
+      await emailjs.send(service_id, template_id, formState, userId);
+      setFormState(initialForm);
+      setLoading(false);
+      setButtonMessage("Success!!");
+    } catch (err) {
+      setLoading(false);
+      setButtonMessage("Error, Try again.");
+    }
   };
   return (
     <>
@@ -61,6 +94,8 @@ const Contact = () => {
                     id="name"
                     type="text"
                     required
+                    value={name}
+                    onChange={onChange}
                   />
                 </div>
 
@@ -72,6 +107,8 @@ const Contact = () => {
                     id="email"
                     type="email"
                     required
+                    value={email}
+                    onChange={onChange}
                   />
                 </div>
               </div>
@@ -80,11 +117,15 @@ const Contact = () => {
                 <textarea
                   name="message"
                   id="message"
-                  required
                   placeholder="Hello, I think we need you to work on/collaborate this particular product... Reach out as soon as you can."
+                  required
+                  value={message}
+                  onChange={onChange}
                 ></textarea>
               </div>
-              <button type="submit">Send Message.</button>
+              <button type="submit">
+                {loading ? <Spinner /> : buttonMessage}
+              </button>
             </form>
           </div>
           <Footer />
