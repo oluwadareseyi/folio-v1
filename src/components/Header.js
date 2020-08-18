@@ -20,7 +20,7 @@ const Header = ({ history }) => {
     <div className="header">
       <div className="logo header-item">
         <Link to="/">
-          <img src={require("../assets/images/seyilogo2.png")} alt="" />
+          <img src={require("../assets/images/seyilogo2.svg")} alt="" />
         </Link>
       </div>
       <div
