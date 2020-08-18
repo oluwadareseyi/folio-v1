@@ -10,14 +10,6 @@
 
 
 
-// Temporary styles
-// .pages {
-//     background: $grey-black;
-//     height: 100vh;
-//     height: calc(var(--vh, 1vh) * 100);
-// }
-
-
 // entry transition class
 .transition {
     overflow: hidden;
@@ -48,10 +40,6 @@
     background-color: $white;
     border-radius: 50%;
     color: $black;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // font-weight: 800;
     position: absolute;
     transition: 450ms ease-out;
     z-index: 10;
@@ -61,34 +49,10 @@
     @include media("<=tablet") {
         display: none;
     }
-
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     width: 10px;
-    //     height: 10px;
-    //     border: 8px solid rgb(187, 184, 184);
-    //     border-radius: 50%;
-    //     opacity: .5;
-    //     top: -8px;
-    //     left: -8px;
-    // }
 }
 
 .cursor2 {
-    // opacity: .7;
     width: 10px;
     height: 10px;
     transition: 200ms ease-out;
-    // mix-blend-mode: lighten;
 }
-
-// @keyframes cursorName {
-//     from {
-//         transform: scale(1);
-//     }
-
-//     to {
-//         transform: scale(.8);
-//     }
-// }

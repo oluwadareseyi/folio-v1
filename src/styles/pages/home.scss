@@ -6,26 +6,12 @@
     border-radius: $size * 2 0px 0px $size * 2;
 }
 
-// @function randomNum($min, $max) {
-//     $rand: random();
-//     $randomNum: $min + floor($rand * (($max - $min) + 1));
-
-//     @return $randomNum;
-// }
 
 .landing {
     position: relative;
     background: $blueBlack;
     color: $white;
     z-index: 2;
-
-    // .text {
-    //     background: linear-gradient(90deg, #b3aef5 4.68%, #d7cbe7 42.61%, #e5c8c8 64.68%, #ecbdaa 96.43%);
-    //     -webkit-background-clip: text;
-    //     background-clip: text;
-    //     -webkit-text-fill-color: transparent;
-    //     color: #fff;
-    // }
 
     &__top {
         padding: 180px 100px;
@@ -42,7 +28,6 @@
         @include media("<764px") {
             text-align: left;
             padding-bottom: 80px;
-            // padding-right: 120px;
         }
 
         @include media("<=600px") {
@@ -118,7 +103,6 @@
 
             a {
                 color: $green;
-                // margin-right: 10px;
             }
 
             span {
@@ -500,9 +484,8 @@
                 top: -30%;
                 width: 100%;
                 height: 100%;
-                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597339831/Portfolio/img-1_xe9bzz.png") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1597339831/Portfolio/img-1_xe9bzz.png") no-repeat;
                 background-size: contain;
-                // background-position: 50% 50%;
             }
         }
 
@@ -512,10 +495,8 @@
             .box-image {
                 width: 110%;
                 height: 100%;
-                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597345617/Portfolio/img-2_q7ekzu.png") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1597345617/Portfolio/img-2_q7ekzu.png") no-repeat;
                 background-size: contain;
-                // background-position: 20% 0;
-                // margin-left: 50px;
                 margin-top: 40px;
             }
         }
@@ -526,25 +507,21 @@
             .box-image {
                 width: 150%;
                 height: 100%;
-                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597339858/Portfolio/img-3_uddkbc.png") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1597339858/Portfolio/img-3_uddkbc.png") no-repeat;
                 background-size: contain;
-                // background-position: 20% 0;
-                // margin-left: -60px;
                 margin-top: 10px;
             }
         }
 
         .box-4 {
-            // background: $redShape;
             background: rgb(232, 49, 81);
             margin-top: -130px;
 
             .box-image {
                 width: 115%;
                 height: 100%;
-                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto/v1597345646/Portfolio/img-4_klotuu.jpg") no-repeat;
+                background: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1597345646/Portfolio/img-4_klotuu.jpg") no-repeat;
                 background-size: contain;
-                // background-position: 20% 0;
                 margin-left: 30px;
                 margin-top: 20px;
             }
@@ -579,7 +556,6 @@
         .topic {
             font-size: 17px;
             color: $secText;
-            // font-family: 'Manrope', sans-serif;
             font-weight: 700;
             margin-bottom: 100px;
         }
@@ -621,7 +597,6 @@
                     height: calc(100% - 40px);
                     display: flex;
                     justify-content: space-between;
-                    // align-items: center;
 
                     .fab {
                         color: $secText;
