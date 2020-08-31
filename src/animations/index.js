@@ -104,7 +104,7 @@ export const preLoaderAnim = () => {
 export const openMenu = () => {
   const tl = gsap.timeline();
   tl.to("body", {
-    duration: 0.2,
+    duration: 0.1,
     css: { overflowY: "hidden" },
     ease: "power3.out",
   })
@@ -115,6 +115,11 @@ export const openMenu = () => {
     .to(".header-item", {
       duration: 0.1,
       css: { background: "none" },
+    })
+    .to(".cls-1", {
+      duration: 0.1,
+      delay: 0.3,
+      css: { fill: "#ffffff" },
     })
     .to(
       [".nav-secondary", ".nav-primary"],
@@ -127,7 +132,7 @@ export const openMenu = () => {
         },
         ease: "power3.inOut",
       },
-      "-=.15"
+      "-=.5"
     )
     .from(
       ".nav-link",
@@ -165,6 +170,11 @@ export const closeMenu = () => {
         amount: 0.1,
       },
       ease: "power3.inOut",
+    })
+    .to(".cls-1", {
+      duration: 0.1,
+      delay: -0.3,
+      css: { fill: "#08e7f3" },
     })
     .to(".header-item", {
       duration: 0.5,

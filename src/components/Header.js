@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { openMenu, closeMenu } from "../animations";
+import { ReactComponent as Logo } from "../assets/images/logo-full.svg";
 
 const Header = ({ history }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,9 +19,9 @@ const Header = ({ history }) => {
   }, [menuOpen, history]);
   return (
     <div className="header">
-      <div className="logo header-item">
+      <div className={`${menuOpen ? "logo-open" : ""} logo header-item`}>
         <Link to="/">
-          <img src={require("../assets/images/seyilogo2.svg")} alt="" />
+          <Logo />
         </Link>
       </div>
       <div
