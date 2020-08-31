@@ -13,7 +13,7 @@ export const preLoaderAnim = () => {
   })
     .to(".landing", {
       duration: 0.05,
-      css: { overflowY: "hidden", height: "100vh" },
+      css: { overflowY: "hidden", height: "90vh" },
     })
     .to(".texts-container", {
       duration: 0,
@@ -127,7 +127,7 @@ export const openMenu = () => {
         },
         ease: "power3.inOut",
       },
-      "-=.1"
+      "-=.15"
     )
     .from(
       ".nav-link",

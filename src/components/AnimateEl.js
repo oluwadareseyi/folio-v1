@@ -17,6 +17,7 @@ const AnimateEl = ({ children }) => {
 
   return (
     <div
+      style={{ display: "inherit" }}
       className={`fade-in-section ${isVisible ? "visible" : ""}`}
       ref={domRef}
     >

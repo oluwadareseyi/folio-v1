@@ -6,6 +6,7 @@ import { ReactComponent as ScrollSVG } from "../assets/images/down-scroll.svg";
 import { ReactComponent as Triangle } from "../assets/images/triangle.svg";
 import { boxHover, boxExit } from "../animations";
 import Footer from "../components/Footer";
+import AnimateEl from "../components/AnimateEl";
 
 const transition = { duration: 1, ease: "easeInOut", delay: 0.8 };
 
@@ -75,80 +76,90 @@ const Home = () => {
         </section>
 
         <section className="landing__work">
-          <div className="title">
-            My <br /> Projects -
-          </div>
+          <AnimateEl>
+            <div className="title">
+              My <br /> Projects -
+            </div>
+          </AnimateEl>
           <div className="boxes">
-            <a
-              onMouseEnter={boxHover}
-              onMouseLeave={boxExit}
-              className="box box-1"
-              href="/"
-            >
-              <div className="box-content">
-                <div className="box-anim p-title">Perxels</div>
-                <div className="box-anim p-sub">
-                  Responsive website for a design school
+            <AnimateEl>
+              <a
+                onMouseEnter={boxHover}
+                onMouseLeave={boxExit}
+                className="box box-1"
+                href="/"
+              >
+                <div className="box-content">
+                  <div className="box-anim p-title">Perxels</div>
+                  <div className="box-anim p-sub">
+                    Responsive website for a design school
+                  </div>
+                  <div className="box-anim link">View Project &#8594;</div>
                 </div>
-                <div className="box-anim link">View Project &#8594;</div>
-              </div>
 
-              <div className="box-image"></div>
-            </a>
-            <a
-              href="https://printstudio.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="box box-2"
-              onMouseEnter={boxHover}
-              onMouseLeave={boxExit}
-            >
-              <div className="box-content">
-                <div className="box-anim p-title">Print Studio</div>
-                <div className="box-anim p-sub">
-                  Online platform for all things prints
+                <div className="box-image"></div>
+              </a>
+            </AnimateEl>
+            <AnimateEl>
+              <a
+                href="https://printstudio.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="box box-2"
+                onMouseEnter={boxHover}
+                onMouseLeave={boxExit}
+              >
+                <div className="box-content">
+                  <div className="box-anim p-title">Print Studio</div>
+                  <div className="box-anim p-sub">
+                    Online platform for all things prints
+                  </div>
+                  <div className="box-anim link">View Project &#8594;</div>
                 </div>
-                <div className="box-anim link">View Project &#8594;</div>
-              </div>
 
-              <div className="box-image"></div>
-            </a>
-            <a
-              href="https://www.lifepith.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="box box-3"
-              onMouseEnter={boxHover}
-              onMouseLeave={boxExit}
-            >
-              <div className="box-content">
-                <div className="box-anim p-title">Life Pith</div>
-                <div className="box-anim p-sub">
-                  A social enterprise for young leaders
+                <div className="box-image"></div>
+              </a>
+            </AnimateEl>
+            <AnimateEl>
+              <a
+                href="https://www.lifepith.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="box box-3"
+                onMouseEnter={boxHover}
+                onMouseLeave={boxExit}
+              >
+                <div className="box-content">
+                  <div className="box-anim p-title">Life Pith</div>
+                  <div className="box-anim p-sub">
+                    A social enterprise for young leaders
+                  </div>
+                  <div className="box-anim link">View Project &#8594;</div>
                 </div>
-                <div className="box-anim link">View Project &#8594;</div>
-              </div>
 
-              <div className="box-image"></div>
-            </a>
-            <a
-              href="https://vaccineapp.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={boxHover}
-              onMouseLeave={boxExit}
-              className="box box-4"
-            >
-              <div className="box-content">
-                <div className="box-anim p-title">Vaccine App</div>
-                <div className="box-anim p-sub">
-                  Landing page for a health center
+                <div className="box-image"></div>
+              </a>
+            </AnimateEl>
+            <AnimateEl>
+              <a
+                href="https://vaccineapp.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={boxHover}
+                onMouseLeave={boxExit}
+                className="box box-4"
+              >
+                <div className="box-content">
+                  <div className="box-anim p-title">Vaccine App</div>
+                  <div className="box-anim p-sub">
+                    Landing page for a health center
+                  </div>
+                  <div className="box-anim link">View Project &#8594;</div>
                 </div>
-                <div className="box-anim link">View Project &#8594;</div>
-              </div>
 
-              <div className="box-image"></div>
-            </a>
+                <div className="box-image"></div>
+              </a>
+            </AnimateEl>
           </div>
           <a
             href="https://codepen.io/oluwadareseyi"
