@@ -9,7 +9,12 @@ export const preLoaderAnim = () => {
   tl.to("body", {
     duration: 0.1,
     css: { overflowY: "hidden" },
+    ease: "power3.inOut",
   })
+    .to(".landing", {
+      duration: 0.05,
+      css: { overflowY: "hidden", height: "100vh" },
+    })
     .to(".texts-container", {
       duration: 0,
       opacity: 1,
@@ -29,6 +34,11 @@ export const preLoaderAnim = () => {
       skewY: -20,
       stagger: 0.2,
       ease: "Power3.easeOut",
+    })
+
+    .to(".landing", {
+      duration: 0.05,
+      css: { overflowY: "hidden", height: "unset" },
     })
     .to("body", {
       duration: 0.1,
@@ -93,28 +103,32 @@ export const preLoaderAnim = () => {
 
 export const openMenu = () => {
   const tl = gsap.timeline();
-  tl.to(".hamburger-menu", {
-    duration: 0,
-    css: { display: "block" },
+  tl.to("body", {
+    duration: 0.2,
+    css: { overflowY: "hidden" },
+    ease: "power3.out",
   })
+    .to(".hamburger-menu", {
+      duration: 0.1,
+      css: { display: "block" },
+    })
     .to(".header-item", {
-      duration: 0,
+      duration: 0.1,
       css: { background: "none" },
     })
-    .to("body", {
-      duration: 0.1,
-      css: { overflowY: "hidden" },
-      ease: "power3.inOut",
-    })
-    .to([".nav-secondary", ".nav-primary"], {
-      duration: 0.8,
-      height: "100%",
-      transformOrigin: "right top",
-      stagger: {
-        amount: 0.1,
+    .to(
+      [".nav-secondary", ".nav-primary"],
+      {
+        duration: 0.8,
+        height: "100%",
+        transformOrigin: "right top",
+        stagger: {
+          amount: 0.1,
+        },
+        ease: "power3.inOut",
       },
-      ease: "power3.inOut",
-    })
+      "-=.1"
+    )
     .from(
       ".nav-link",
       {
@@ -139,7 +153,7 @@ export const openMenu = () => {
 export const closeMenu = () => {
   const tl = gsap.timeline();
   tl.to("body", {
-    duration: 0.1,
+    duration: 0.05,
     css: { overflowY: "scroll" },
     ease: "power3.inOut",
   })
@@ -157,7 +171,7 @@ export const closeMenu = () => {
       css: { background: "rgba(11,11,15,.8)" },
     })
     .to(".hamburger-menu", {
-      duration: 0,
+      duration: 0.05,
       css: { display: "none" },
     });
 

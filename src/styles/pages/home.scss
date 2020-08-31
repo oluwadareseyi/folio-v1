@@ -13,6 +13,7 @@
     color: $white;
     z-index: 2;
 
+
     &__top {
         padding: 180px 100px;
         padding-bottom: 160px;
@@ -252,7 +253,6 @@
         .title {
             font-weight: 800;
             font-size: 55px;
-            opacity: 0;
 
             @include media("<=522px") {
                 font-size: 45px;
@@ -342,7 +342,6 @@
             position: relative;
             overflow: hidden;
             padding: 0 20px;
-            opacity: 0;
 
 
             @include media(">1300px") {
