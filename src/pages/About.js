@@ -150,6 +150,34 @@ const About = () => {
                 </div>
 
                 <div className="company">
+                  <div className="name">Perxels (Contract)</div>
+                  <div className="year">Aug 2020 - Sept 2020</div>
+                  <ul className="tasks">
+                    <li>
+                      Orchestrated and developed the frontend infrastructure,
+                      design, and functionality for Perxels' web app as the sole
+                      developer.
+                    </li>
+
+                    <li>Translated Figma designs to code.</li>
+
+                    <li>Built an easily readable Layout system.</li>
+
+                    <li>Integrated form submission with Google sheets.</li>
+                    <li>
+                      Created an automated response system for the client.
+                    </li>
+
+                    <li>Enforced healthy codebases and standards.</li>
+
+                    <li>
+                      Exceeded the client's estimations with regards to
+                      completion time.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="company">
                   <div className="name">Pith Africa - CFO</div>
                   <div className="year">Dec 2019 - Today</div>
                   <ul className="tasks">
