@@ -19,7 +19,7 @@
         align-items: center;
         justify-content: space-between;
         height: 60px;
-        width: 310px;
+        width: 330px;
         font-size: 20px;
         overflow: hidden;
         font-weight: 800;
@@ -27,8 +27,8 @@
         color: $white;
 
         @include media("<=phone") {
-            font-size: 20px;
-            width: 270px;
+            font-size: 17px;
+            width: 280px;
         }
     }
 }

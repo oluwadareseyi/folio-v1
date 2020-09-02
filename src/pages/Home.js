@@ -174,7 +174,7 @@ const Home = () => {
 
         <section className="find-me">
           <div className="title">
-            On The <br /> Web{" "}
+            Find <br /> Me{" "}
             <span role="img" aria-label="find-emoji">
               🔎
             </span>
