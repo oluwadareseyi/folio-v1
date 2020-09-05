@@ -43,6 +43,10 @@
     //     }
     // }
 
+    .ham-disabled {
+        pointer-events: none;
+    }
+
     .hamburger {
         cursor: pointer;
         mix-blend-mode: difference;

@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "../assets/images/logo-full.svg";
 
 const Header = ({ history }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     if (menuOpen) {
@@ -17,16 +18,27 @@ const Header = ({ history }) => {
       setMenuOpen(false);
     });
   }, [menuOpen, history]);
+
+  const menuToggle = () => {
+    setDisabled(true);
+
+    setTimeout(() => {
+      setDisabled(false);
+    }, 1500);
+    setMenuOpen(!menuOpen);
+  };
   return (
     <div className="header">
-      <div className={`${menuOpen ? "logo-open" : ""} logo header-item`}>
+      <div className={`logo header-item`}>
         <Link to="/">
           <Logo />
         </Link>
       </div>
       <div
-        onClick={() => setMenuOpen(!menuOpen)}
-        className={`hamburger${menuOpen ? "__active" : ""} header-item`}
+        onClick={menuToggle}
+        className={`hamburger${menuOpen ? "__active" : ""} ${
+          disabled ? "ham-disabled" : ""
+        } header-item`}
       >
         <div className="hamburger-icon"></div>
       </div>
