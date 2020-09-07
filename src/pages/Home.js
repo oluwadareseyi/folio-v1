@@ -87,6 +87,7 @@ const Home = () => {
                 onMouseEnter={boxHover}
                 onMouseLeave={boxExit}
                 className="box box-1"
+                target="_blank"
                 href="https://www.perxels.com/"
               >
                 <div className="box-content">
