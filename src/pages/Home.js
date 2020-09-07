@@ -88,6 +88,7 @@ const Home = () => {
                 onMouseLeave={boxExit}
                 className="box box-1"
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.perxels.com/"
               >
                 <div className="box-content">
