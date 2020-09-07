@@ -87,7 +87,7 @@ const Home = () => {
                 onMouseEnter={boxHover}
                 onMouseLeave={boxExit}
                 className="box box-1"
-                href="/"
+                href="https://www.perxels.com/"
               >
                 <div className="box-content">
                   <div className="box-anim p-title">Perxels</div>
@@ -112,7 +112,7 @@ const Home = () => {
                 <div className="box-content">
                   <div className="box-anim p-title">Print Studio</div>
                   <div className="box-anim p-sub">
-                    Online platform for all things prints
+                    Online printing platform and shop
                   </div>
                   <div className="box-anim link">View Project &#8594;</div>
                 </div>
