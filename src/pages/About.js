@@ -109,13 +109,13 @@ const About = () => {
                 <div className="company">
                   <div className="name tech">On The Job:</div>
                   <ul className="tasks">
-                    <li>Testing.</li>
+                    <li>Responsive Design.</li>
                     <li>Version Control.</li>
                     <li>
                       JavaScript best practices, clean code and ES6+ knowledge.
                     </li>
                     <li>Continuous Integration/Development.</li>
-                    <li>Responsive Design.</li>
+                    <li>Testing.</li>
                   </ul>
                 </div>
               </div>
@@ -128,7 +128,7 @@ const About = () => {
               <div className="companies">
                 <div className="company">
                   <div className="name">Ijaya Comics</div>
-                  <div className="year">Feb 2020 - Today</div>
+                  <div className="year">July 2020 - Today</div>
                   <ul className="tasks">
                     <li>
                       Worked with other developers and founders to create the
@@ -179,7 +179,7 @@ const About = () => {
 
                 <div className="company">
                   <div className="name">Pith Africa - CFO</div>
-                  <div className="year">Dec 2019 - Today</div>
+                  <div className="year">July 2020 - Today</div>
                   <ul className="tasks">
                     <li>
                       Built temporary product pages on the front-end and
@@ -203,7 +203,7 @@ const About = () => {
 
                 <div className="company">
                   <div className="name">Life Pith (NGO)</div>
-                  <div className="year">April 2020 - Today</div>
+                  <div className="year">June 2020 - Today</div>
                   <ul className="tasks">
                     <li>
                       Carried out design planning and built up the landing page
