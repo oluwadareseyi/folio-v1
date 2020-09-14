@@ -8,23 +8,23 @@ const Navigation = () => {
         <div className="nav-content">
           <div className="nav-title">Menu</div>
           <div className="nav-links">
-            <div className="nav-link">
+            <div data-text="Home" className="nav-link">
               <NavLink exact activeClassName="active-link" to="/">
                 Home
               </NavLink>
             </div>
-            <div className="nav-link">
+            <div data-text="About Me" className="nav-link">
               <NavLink activeClassName="active-link" to="/about">
                 About me
               </NavLink>
             </div>
-            <div className="nav-link">
+            <div data-text="Contact" className="nav-link">
               <NavLink activeClassName="active-link" to="/contact">
                 Contact
               </NavLink>
             </div>
 
-            <div className="nav-link">
+            <div data-text="GitHub" className="nav-link">
               <a
                 href="https://www.github.com/oluwadareseyi/"
                 target="_blank"
@@ -34,7 +34,7 @@ const Navigation = () => {
               </a>
             </div>
 
-            <div className="nav-link">
+            <div data-text="Linkedin" className="nav-link">
               <a
                 href="https://www.linkedin.com/in/oluwadareseyi/"
                 target="_blank"
@@ -44,7 +44,7 @@ const Navigation = () => {
               </a>
             </div>
 
-            <div className="nav-link">
+            <div data-text="Blog" className="nav-link">
               <a
                 href="https://dev.to/oluwadareseyi"
                 target="_blank"
