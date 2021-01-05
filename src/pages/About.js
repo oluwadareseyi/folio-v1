@@ -64,7 +64,7 @@ const About = () => {
               </p>
             </div>
             <a
-              href="https://drive.google.com/uc?export=download&id=1yPgmXeK0A9MmYjJCivKYl9q9IVEuyVBs"
+              href="https://drive.google.com/uc?export=download&id=1fq6Ngm3gGQLVZlZy4wLMNJamHWanZlCX"
               download
             >
               <i className="fas fa-file-alt"></i> Download Resume
@@ -83,23 +83,24 @@ const About = () => {
                   <ul className="tasks">
                     <li>JavaScript</li>
                     <li>React</li>
+                    <li>Nextjs</li>
+                    <li>Gatsbyjs</li>
+                    <li>Vue.js</li>
                     <li>CSS</li>
                     <li>SCSS</li>
                     <li>GSAP</li>
                     <li>Framer Motion</li>
                     <li>CSS-in-JS</li>
                     <li>Firebase</li>
-                    <li>Node</li>
-                    <li>Express</li>
-                    <li>MongoDB</li>
                   </ul>
                 </div>
 
                 <div className="company">
                   <div className="name tech">Familiar:</div>
                   <ul className="tasks">
-                    <li>React Native</li>
-                    <li>Vue.js</li>
+                    <li>Node</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
                     <li>MySQL</li>
                     <li>GraphQL</li>
                     <li>PWAs</li>
@@ -126,6 +127,10 @@ const About = () => {
               </div>
 
               <div className="companies">
+                <div className="company">
+                  <div className="name">Paystack (Contract)</div>
+                  <div className="year">November 2020 - Today</div>
+                </div>
                 <div className="company">
                   <div className="name">Ijaya Comics</div>
                   <div className="year">July 2020 - Today</div>
