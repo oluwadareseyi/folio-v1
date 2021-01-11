@@ -89,12 +89,12 @@ const Home = () => {
                 className="box box-1"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.perxels.com/"
+                href="https://feministco2020.netlify.app/"
               >
                 <div className="box-content">
-                  <div className="box-anim p-title">Perxels</div>
+                  <div className="box-anim p-title">Fem Co</div>
                   <div className="box-anim p-sub">
-                    Responsive website for a design school
+                    A website for the feminist coalition (#EndSars)
                   </div>
                   <div className="box-anim link">View Project &#8594;</div>
                 </div>
@@ -164,7 +164,7 @@ const Home = () => {
             </AnimateEl>
           </div>
           <a
-            href="https://codepen.io/oluwadareseyi"
+            href="https://github.com/oluwadareseyi"
             target="_blank"
             rel="noopener noreferrer"
           >
