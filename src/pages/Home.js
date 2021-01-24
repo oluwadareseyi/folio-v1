@@ -124,7 +124,7 @@ const Home = () => {
             </AnimateEl>
             <AnimateEl>
               <a
-                href="https://www.lifepith.com/"
+                href="https://santorinis.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="box box-3"
@@ -132,9 +132,9 @@ const Home = () => {
                 onMouseLeave={boxExit}
               >
                 <div className="box-content">
-                  <div className="box-anim p-title">Life Pith</div>
+                  <div className="box-anim p-title">Santorinis</div>
                   <div className="box-anim p-sub">
-                    A social enterprise for young leaders
+                    A drag and drop pizza maker
                   </div>
                   <div className="box-anim link">View Project &#8594;</div>
                 </div>
@@ -144,7 +144,7 @@ const Home = () => {
             </AnimateEl>
             <AnimateEl>
               <a
-                href="https://vaccineapp.netlify.app/"
+                href="https://hauteafrica.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={boxHover}
@@ -152,9 +152,9 @@ const Home = () => {
                 className="box box-4"
               >
                 <div className="box-content">
-                  <div className="box-anim p-title">Vaccine App</div>
+                  <div className="box-anim p-title">Haute Couture</div>
                   <div className="box-anim p-sub">
-                    Landing page for a health center
+                    High Fashion brand landing page
                   </div>
                   <div className="box-anim link">View Project &#8594;</div>
                 </div>
