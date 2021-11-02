@@ -11,16 +11,6 @@ const Footer = () => {
           <div className="link">
             <p>
               <a
-                data-text="wa.me/oluwaseyi"
-                href="https://wa.me/+2348171265376"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                wa.me/oluwaseyi
-              </a>
-            </p>
-            <p>
-              <a
                 data-text="oluwadareseyii@gmail.com"
                 href="mailto:oluwadareseyii@gmail.com"
               >
